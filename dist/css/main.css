@@ -115,7 +115,7 @@ body{
     padding: 0 1rem;
     position: absolute;
     overflow: hidden !important;
-    background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7) ), url('/dist/assets/home.jpg');
+    background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7) ), url('../assets/home.jpg');
     object-fit: cover;
     background-size: cover;
     background-position: center;
@@ -136,7 +136,7 @@ body{
     left: 0;
     height: 8.5rem;
     width: 100%;
-    background: url('/dist/assets/wave.png');
+    background: url('../assets/wave.png');
     background-size: 100rem 11rem;
     animation: waves 8s linear infinite;
     background-repeat: repeat-x;
@@ -215,7 +215,7 @@ padding: 50px;;
     justify-content: space-between;
     align-items: center;
     padding: 50px;
-    background:linear-gradient(rgba(0, 0, 0, .7),rgba(0, 0, 0, 0.7)),url('/dist/assets/team.jpg') ;
+    background:linear-gradient(rgba(0, 0, 0, .7),rgba(0, 0, 0, 0.7)),url('../assets/team.jpg') ;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment:fixed;
@@ -317,7 +317,7 @@ padding: 50px;;
 
 /*Onsite service*/
 .onsite{
-    background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('/dist/assets/security-guard2.jpg');
+    background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('../assets/security-guard2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -329,7 +329,7 @@ padding: 50px;;
 .onsite-guard{
     min-height: 63vh;
     min-width: 10vh;
-    background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('/dist/assets/office.jpg');
+    background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('../assets/office.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -346,7 +346,7 @@ padding: 50px;;
 /*Eectronic service*/
 
 .elec-cam{
-    background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('/dist/assets/electronic-cam2.png');
+    background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('../assets/electronic-cam2.png');
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -360,7 +360,7 @@ padding: 50px;;
 .elec-security{
     min-height: 83vh;
     min-width: 10vh;
-    background:linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url('/dist/assets/security-installation.webp');
+    background:linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url('../assets/security-installation.webp');
     background-attachment: fixed;
     background-size:cover;
     background-repeat: no-repeat;
@@ -405,7 +405,7 @@ padding: 50px;;
   .cctv-installation{
     height: 1300px;
     width: 100%;
-    background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('/dist/assets/cctv-camera-installation-services.jpg');
+    background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('../assets/cctv-camera-installation-services.jpg');
     background-attachment: fixed;
     background-size:cover;
     background-repeat: no-repeat;
@@ -488,7 +488,7 @@ padding: 50px;;
 .alarm-system{
     height: 100vh;
     width: 100%;
-    background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('/dist/assets/security-installation.webp');
+    background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('../assets/security-installation.webp');
     background-size:cover;
     background-repeat: no-repeat;
     background-color: #111 ;
@@ -515,7 +515,7 @@ padding: 50px;;
 
   /*Patrol */
   .patrol{
-    background-image:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("/dist/assets/patrol-2.jpg");
+    background-image:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("../assets/patrol-2.jpg");
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -526,7 +526,7 @@ padding: 50px;;
 .patrols{
     min-height: 63vh;
     min-width: 10vh;
-    background:linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('/dist/assets/cctv.jfif');
+    background:linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('../assets/cctv.jfif');
     background-size:cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -595,7 +595,7 @@ padding: 50px;;
 .monitoring-section{
     height: 700px;
     width: 100%;
-    background:linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/dist/assets/control-room.jpg');
+    background:linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/control-room.jpg');
     background-size:cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -624,7 +624,7 @@ padding: 50px;;
 /*Integrated section*/
 
 .intergrated{
-    background:linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('/dist/assets/intergrated.jfif');
+    background:linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('../assets/intergrated.jfif');
     background-size:cover;
     background-repeat: no-repeat;
     background-color: #111 ;
@@ -635,13 +635,14 @@ padding: 50px;;
 .intergrated-services{
     min-height: 75vh;
     min-width: 10vh;
-    background:linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, .8) ), url('/dist/assets/intergrated.jfif');
+    background:linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, .8) ), url('../assets/intergrated.jfif');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     color:white;
 
 }
+
 .intergrate-service{
     height: 900px;
     width:100%;
@@ -649,6 +650,7 @@ padding: 50px;;
     gap: 5px;
     padding: 10px;
 }
+
 .intergrated-services h3{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 300;
@@ -665,15 +667,18 @@ padding: 50px;;
     transition: 3s;
     transition-duration: 2s;
 }
+
 .intergrate-service img{
     height: 470px;
     max-width: 30vw;
     position: relative;
 }
+
 .integrate-service-item h1{
     font-size: 48px;
     color: var(--bg-primary-color);
 }
+
 .integrate-service-item p{
     padding:3px;
     font-family: Arial, Helvetica, sans-serif;
@@ -681,6 +686,7 @@ padding: 50px;;
     line-height: 1.5;
     font-size: 18px;
 }
+
 .integrate-service-item h3 {
     font-size: 25px;
     font-family: Arial, Helvetica, sans-serif;
@@ -740,7 +746,7 @@ padding: 50px;;
 .careers{
     min-height: 75vh;
     min-width: 10vh;
-    background:linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, .8) ), url('../../dist/img/job-vacancy.jpg ');
+    background:linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, .8) ), url('../assets/job-vacancy.jpg ');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -781,44 +787,45 @@ padding: 50px;;
 }
 
 .firearm{
-    background: url('/dist/assets/firearms.jfif');
+    background: url('../assets/firearms.jfif');
     background-size: cover;
     background-position: center;
     object-fit: cover;
 }
 
 .role-of-gaurd{
-    background: url('/dist/assets/security-guard2.jpg');
+    background: url('../assets/security-guard2.jpg');
     background-size: cover;
     background-position: center;
     object-fit: cover;
 }
 
 .power-of-arrest{
-    background: url('/dist/assets/handcuffs.jpg');
+    background: url('../assets/handcuffs.jpg');
     background-size: cover;
     background-position: center;
     object-fit: cover;
 }
 .use-of-force{
-    background: url('/dist/assets/gaurds-3.JPG');
-    background-size: cover;
-    background-position: center;
-    object-fit: cover;
-}
-.first-aid{
-    background: url('/dist/assets/first-aid.jfif');
-    background-size: cover;
-    background-position: center;
-    object-fit: cover;
-}
-.crowd-control {
-    background: url('/dist/assets/riot-squard.jpg');
+    background: url('../assets/gaurds-3.JPG');
     background-size: cover;
     background-position: center;
     object-fit: cover;
 }
 
+.first-aid{
+    background: url('../assets/first-aid.jfif');
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+}
+
+.crowd-control {
+    background: url('../assets/riot-squard.jpg');
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+}
 
 .academy-item h2{
     width: 100%;
@@ -826,6 +833,7 @@ padding: 50px;;
     padding-bottom:30px;
     text-align: center;
 }
+
 .academy-item img{
     width: 350px;
     height: 350px;
@@ -869,7 +877,7 @@ padding: 50px;;
 .news{
     min-height: 63vh;
     min-width: 10vh;
-    background:linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('../../dist/img/Daily-news.webp');
+    background:linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('../assets/Daily-news.webp');
     background-size:cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -898,10 +906,7 @@ article h1:hover{
     cursor: pointer;
 
 }
-.card{
 
-    
-}
 .news-item{
     width: 100%;
     height: 450px;
@@ -920,8 +925,8 @@ font-weight: 700;
 .news-item img{
     height: 400px;
     width: 100%;
-    
 }
+
 article{
     padding: 20px;
 }
