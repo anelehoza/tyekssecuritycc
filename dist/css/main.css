@@ -100,7 +100,7 @@ body{
 .nav_close .fa-times{
     cursor: pointer;
     z-index: 1;
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     color: #fff;
 }
 
@@ -166,8 +166,7 @@ body{
 /*About Section*/
 
 .about{
-    min-height: 55vh;
-    width: 100vw;
+    width: 100%;
     top: -3rem;
     text-align: center;
     overflow: hidden;
@@ -175,15 +174,19 @@ body{
 }
 
 .about-container{
-padding: 50px;;
+padding: 30px;
 }
 
 .text{
-    display: flex;
+    display: inline-block;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
+}
+
+.text p{
+  
 }
 
 .text h1 {
@@ -231,11 +234,13 @@ padding: 50px;;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    margin: 0 2px;
 }
 
 .team h3{
     color: #fff;
     padding-top: 20px;
+    font-size: 20px;
 }
 
 
@@ -263,6 +268,18 @@ padding: 50px;;
 
 /*Services Section*/
 
+.services-home{
+    min-height: 63vh;
+    display: flex;
+    flex-direction: column;
+    background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('../assets/intrated-bg.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color:white;
+    object-fit: cover;    
+}
+
 .services{
     min-height: 55vh;
     width: 100vw;
@@ -274,11 +291,12 @@ padding: 50px;;
 
 .services-container{
     height:auto;
-    width: 100%;
+    width: 97%;
     display:grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    margin:0 auto;
+    margin:5px 10px;
+    padding: 20px 10px;
 }
 
 .services-item{
@@ -327,8 +345,10 @@ padding: 50px;;
 }
 
 .onsite-guard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     min-height: 63vh;
-    min-width: 10vh;
     background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('../assets/office.jpg');
     background-attachment: fixed;
     background-size: cover;
@@ -340,6 +360,7 @@ padding: 50px;;
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 300;  
+    padding-top:50px;
 }
 
 
@@ -358,8 +379,9 @@ padding: 50px;;
     color:white;
 }
 .elec-security{
+    display: flex;
+    flex-direction: column;
     min-height: 83vh;
-    min-width: 10vh;
     background:linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url('../assets/security-installation.webp');
     background-attachment: fixed;
     background-size:cover;
@@ -524,8 +546,9 @@ padding: 50px;;
 }
 
 .patrols{
+    display: flex;
+    flex-direction: column;
     min-height: 63vh;
-    min-width: 10vh;
     background:linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('../assets/cctv.jfif');
     background-size:cover;
     background-repeat: no-repeat;
@@ -633,8 +656,9 @@ padding: 50px;;
 }
 
 .intergrated-services{
+    display: flex;
+    flex-direction: column;
     min-height: 75vh;
-    min-width: 10vh;
     background:linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, .8) ), url('../assets/intergrated.jfif');
     background-size: cover;
     background-repeat: no-repeat;
@@ -736,12 +760,54 @@ padding: 50px;;
 
 
 .office-container{
-    width:100%;
     display: flex;
-    gap: 10px;  
-}    
+    width: 90%;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    margin: 15px 30px;
+}   
+.office-item h4, .office-item p{
+    display: flex;
+    flex-direction: column;
+} 
+.office-item img{
+    height: 350px;
+    width: 450px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
+.offices-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+}
 
+.offices-home {
+    display: flex;
+    flex-direction: column;
+    min-height: 75vh;
+    width: 100%;
+    background:linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, .8) ), url('../assets/map2.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color:white;
+
+}
+.offices-item {
+    height: 250px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+   
+}
 /*Careers*/
 .careers{
     min-height: 75vh;
@@ -1223,11 +1289,11 @@ article{
     right: 15px;
     bottom: 15px;
     transition: background 0.3s;
-    z-index: 9;
+    z-index: 100;
 }
 
 .back-to-top i {
-    color: #ffffff;
+    color:#111;
 }
 
 .back-to-top i:hover {
@@ -1254,8 +1320,13 @@ article{
 
 
 @media screen and (max-width:1023px) {
+    .logo img{
+        width: 60px;
+        height: 55px;
+    }
     .home{
-      max-height: 50vh;}
+      max-height: 40vh;
+    }
     .nav_menu{
         position: fixed;
         top:-100%;
@@ -1264,7 +1335,6 @@ article{
         padding-block: 4.5rem 4rem;
         transition: top .4s;
         width:100% ;
-    
     }
     .nav_list{
         display: flex;
@@ -1322,11 +1392,13 @@ article{
         justify-content: space-between;
     }
     .services-item{
+        height: 300px;
+        width: 300px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        padding: 20px;
+        padding: 20px 10px;
     }
 
 .services-item h3 {
@@ -1334,12 +1406,13 @@ article{
 }
 
 .services-item p{
-    padding: 15px 20px;
+    display: block;
+    padding: 15px ;
 }
 
 .services-item img{
-    width: 48px;
-    height: 40px;
+    width: 68px;
+    height: 60px;
 
 }
 
@@ -1358,18 +1431,19 @@ article{
     width: 100%;
 }
 
-.office-container{
-    height: auto;
-    display: flex;
-    flex-direction: column;
+.offices-container{
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 .offices-item{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    padding: 20px 20px;
+}
+.academy-item{
+    height: 250px;
+    width: 300px;
 }
 
 .academy-container{
@@ -1382,22 +1456,16 @@ article{
 .partners-container{
     width: 100%;
     height: auto;
-    display: flex;
-    flex-direction: column;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
 }
-
-.partners-item{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .partners-item img{
     padding-bottom: 20px;
     height: 60px;
     width: 100px;
 
 }
-
+.partners-item {
+    padding: 15px 10px;
+}
 }

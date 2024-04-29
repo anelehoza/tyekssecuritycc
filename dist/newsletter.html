@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./dist/css/main.css">
+    <link rel="stylesheet" href="css/main.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -20,48 +20,68 @@
    
 </head>
 <body>
-    <header class="header">
-        <a href="#" class="logo" > <img src="/dist/img/logo.png" alt="logo"></a>
-        <div class="menu-icon" onclick="myFunction(this)">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-            </div>
-             <nav class="navbar toggle-nav">
-                <ul>
-                    <li> <a href="/dist/index.html" class="active">Home</a></li>
-                    <li> <a href="#about" >About</a></li>
-                    <li> <a href="#team" >Team</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="newsletter.html" class="active">News</a>
-                    <li><a href="#contact">Contact</a> </li>
-                    <li><a href="careers.html">Careers</a> </li>
-                    <li><a href="#academy">Academy</a>
-                  </ul>
-      
-         </nav>        
-     </header>
-     <div>
-        <section id="home" class="home news">
-            <div class="menu-icon" onclick="myFunction(this)">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
+    <section>
+        <div class="wrapper">
+            <div class="header">
+                <div class="logo">
+                    <a href="#"><img src="../assets/logo.png" alt="logo image" srcset=""></a>
                 </div>
+                    <nav class="nav" id="nav">
+                        <div class="nav_menu show" id="nav-menu">
+                            <ul class="nav_list" id="nav-list">
+                                <li class="nav_item">
+                                    <a href="index.html" class="nav_link">Home</a>
+                                </li>
+                                <li class="nav_item" id="nav-item">
+                                    <a href="#about" class="nav_link">About</a>
+                                </li>
+                                <li class="nav_item">
+                                    <a href="#team" class="nav_link">Team</a>
+                                </li>
+                                <li class="nav_item">
+                                    <a href="services.html" class="nav_link">Services</a>
+                                </li>
+                                <li class="nav_item">
+                                    <a href="#gallery" class="nav_link">Gallery</a>
+                                </li>
+                                <li class="nav_item">
+                                    <a href="newsletter.html" class="nav_link">News</a>
+                                </li>
+                                <li class="nav_item">
+                                    <a href="#office" class="nav_link">Contact</a>
+                                </li>
+                                <li class="nav_item">
+                                    <a href="careers.html" class="nav_link">Careers</a>
+                                </li>
+                                <li class="nav_item">
+                                    <a href="#academy" class="nav_link">Academy</a>
+                                </li>
+                            </ul>
+                            <div class="nav_close" id="nav-close">
+                                <i class="fa fa-times" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="nav_toggle" id="nav-toggle">
+                            <i class="fa fa-bars" aria-hidden="true"></i>
+                        </div>
+                    </nav>
+            </div>
+        </div>
+        <section id="home" class="home news">
             <div class="news-container">
             <h1>NEWS, EVENTS & <br>UPDATES</h1> 
             <h2>Stay informed with our recent happenings, announcements and company highlits.</h2>
         </div>
-        </section>               
-  </div>
+        </section>
+
+    </section>
      <!--Newsletter content-->
      <section>
         <div class="lg-heading">Latest News</div>
             <div class="news-container" id="news-container">
                 <div class="card">
                     <div class="news-item">
-                     <img src="/dist/img/phase-2.jpg" alt="phase two image">
+                     <img src="./assets/phase-2.jpg" alt="phase two image">
                      <p>20 March 2024 </p>
                     </div>
                     <article>
