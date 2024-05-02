@@ -1,5 +1,5 @@
 *{
-    box-sizing: border-box;
+        box-sizing: border-box;
 }
 
 body{
@@ -24,11 +24,13 @@ body{
     color:var(--bg-primary-color);
     position: relative;
     letter-spacing: .2rem;
-
+}
+.about .lg-heading{
+    padding-top: 16rem;
 }
 .wrapper{
     position: relative;
-    height: 100vh;
+    height: 60vh;
     width: 100%;
 }
 .header {
@@ -46,7 +48,7 @@ body{
     width: 80px;
     height: 5.8rem; 
     padding-top: 1.2rem;
-    left: 20px;
+    padding-left: 20px;
     cursor: pointer;
     z-index: 100;
 }
@@ -84,18 +86,10 @@ body{
     background-color: #222;
     width: 100%;
 }
-.nav_toggle{
-    display: flex;
-    cursor: pointer;
-    z-index: 100;
-    font-size: 1.7rem;
-    color: #fff;
-    opacity: 0;
-    padding: 10px;
-}
 
 .show{
-    top: 0;
+
+    top: 5px;
 }
 .nav_close .fa-times{
     cursor: pointer;
@@ -103,7 +97,36 @@ body{
     font-size: 1.8rem;
     color: #fff;
 }
+.menu-btn{
+    position: absolute;
+    display: block;
+    right: 25px;
+    top: 10px;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.3rem;
+    cursor: pointer;
+    opacity: 0;
+}
 
+.btn-line{
+    width: 28px;
+    height: 2px;
+    margin: 0 0 3px 0;
+    background: #fff;
+    transition: all 0.5s ease-out; 
+}
+.menu-btn.close {
+    transform: rotate(180deg);
+ }
+.menu-btn.close .btn-line:nth-child(1) {
+    transform: rotate(45deg) translate(9px, 9px);
+ }
+.menu-btn.close .btn-line:nth-child(2) {
+    opacity: 0;
+ }
+.menu-btn.close .btn-line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px); 
+}
 .home{
     top: 0;
     min-height: 100vh;
@@ -115,11 +138,11 @@ body{
     padding: 0 1rem;
     position: absolute;
     overflow: hidden !important;
-    background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7) ), url('../assets/home.jpg');
+    background:linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7) ), url('../assets/home.jpg');
     object-fit: cover;
     background-size: cover;
     background-position: center;
-
+    background-attachment: fixed;
 }
 
 .home h1{
@@ -130,9 +153,9 @@ body{
 }
 
 .home .wave{
-    position: absolute;
+    position: relative;
     bottom: -.5rem;
-    top: 520px;
+    top: 510px;
     left: 0;
     height: 8.5rem;
     width: 100%;
@@ -363,6 +386,42 @@ padding: 30px;
     padding-top:50px;
 }
 
+.security-item {
+    height: 700px;
+    width:100%;
+    display: grid;
+    grid-template-columns:60% 40%;
+    gap:40px;
+    padding: 30px;
+}
+.security-item img{
+      min-height: 25vh;
+      max-width: 30vw;
+  }
+.security-item h1{
+    font-size: 46px;
+    color:var(--bg-primary-color);
+}
+.security-item h3{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+}
+.security-item button{
+    width: 180px;
+    height: 50px;
+    color: white;
+    background-color: var(--bg-primary-color);
+    font-size: 2rem;
+    border-radius: 25px;
+    border: none;
+}
+.security img{
+    min-height: 15vh;
+    max-width: 30vw;
+    
+}
+
 
 /*Eectronic service*/
 
@@ -381,11 +440,14 @@ padding: 30px;
 .elec-security{
     display: flex;
     flex-direction: column;
-    min-height: 83vh;
-    background:linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) ), url('../assets/security-installation.webp');
+    min-height: 65vh;
+    width: 100%;
+    background:linear-gradient( rgba(0, 0, 0.8, 0.5), rgba(0, 0, 0, 0.9) ), url('../assets/security-installation.webp');
     background-attachment: fixed;
     background-size:cover;
     background-repeat: no-repeat;
+    background-position: center;
+    object-fit:contain;
     color:white; 
 }
 .elec-security h3{
@@ -396,13 +458,19 @@ padding: 30px;
     z-index: 10;
 }
 
+.electronic-container{
+    height: 700px;
+    width:100%;
+    display: grid;
+    padding: 20px;
+}
+
 .electronic-item{
-    height: 500px;
-    width:90%;
+    width:100%;
     display: grid;
     grid-template-columns: 40% 60%;
-    gap:40px;
-    padding: 30px;   
+    gap:90px;
+    padding: 60px; 
 }
 .electronic-item h1{
     font-size: 46px;
@@ -443,19 +511,20 @@ padding: 30px;
 }
 
 .cctv-installation-item {
-    width: 70%;
+    width: 100%;
     margin: 25px;
-    padding:25px;
+    padding:25px 20px;
 }
 .cctv-installation-item h1{
     font-size: 35px;
     color:var(--bg-primary-color);
 }
 .cctv-installation-item ul{
-    margin: 20px;
-    padding: 20px;
-    font-size: 1.9rem;
-    line-height: 3rem; 
+    padding: 10px;
+    line-height: 1.5;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
 }
 .cctv-installation li::marker{
     color: var(--bg-primary-color);
@@ -467,8 +536,8 @@ padding: 30px;
     background-color: var(--bg-primary-color);
     border-radius: 25px;
     border: none;
-    font-size: 2rem;
   }
+
   .acess-control{
     height: 700px;
     width:100%;
@@ -476,13 +545,12 @@ padding: 30px;
     padding: 30px;
 }
 .access-control-item {
-    height: 600px;
+    height: 700px;
     width:100%;
     display: grid;
     grid-template-columns: 70% 30%;
     padding-right: 20px;
-    padding: 60px;
-    margin:45px;
+    padding-top:  40px;
 }
 .acess-control img{
       min-height: 25vh;
@@ -496,6 +564,15 @@ padding: 30px;
     list-style: none;
     font-size: 14px;
 }
+
+.access-control-item p, .access-control-item h4 {
+    padding: 10px;
+    line-height: 1.5;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+}
+
 .acess-control button{
     width: 180px;
     height: 50px;
@@ -518,9 +595,10 @@ padding: 30px;
     color:white; 
 }
 .alarm{
+    width: 100%;
     display: grid;
-    grid-template-columns: 70% 30%;
-    gap: 90px;
+    grid-template-columns: 50% 50%;
+    gap: 10px;
 }
 .alarm img{
     height: 300px;
@@ -549,10 +627,13 @@ padding: 30px;
     display: flex;
     flex-direction: column;
     min-height: 63vh;
-    background:linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('../assets/cctv.jfif');
+    width: 100%;
+    background:linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),url('../assets/control-1.jpg');
     background-size:cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-position: center;
+    object-fit: cover;
 }
 .patrols{
     color:white;
@@ -613,10 +694,11 @@ padding: 30px;
     position: relative;
 }
 .patrol-item img{
-    height: 470px;
+    height: 400px;
+    width: 450px;
 }
 .monitoring-section{
-    height: 700px;
+    height: 500px;
     width: 100%;
     background:linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/control-room.jpg');
     background-size:cover;
@@ -625,6 +707,10 @@ padding: 30px;
     color: #fff;
 }
 .monitoring-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
     height: 400px;
 
 }
@@ -656,23 +742,23 @@ padding: 30px;
 }
 
 .intergrated-services{
+    width: 100%;
     display: flex;
     flex-direction: column;
-    min-height: 75vh;
-    background:linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, .8) ), url('../assets/intergrated.jfif');
+    min-height: 70vh;
+    background:linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, .7) ), url('../assets/intergrated.jfif');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-position: center;
+    object-fit: cover;
     color:white;
 
 }
 
-.intergrate-service{
-    height: 900px;
+.intergrate-service-container{
     width:100%;
     display: grid;
-    gap: 5px;
-    padding: 10px;
 }
 
 .intergrated-services h3{
@@ -682,20 +768,15 @@ padding: 30px;
     font-size: 18px;
 }
 .integrate-service-item{
-    width:100%;
-    display: grid;
-    grid-template-columns: 70% 30%;
-    gap: 20px;
-    padding-right: 20px;
-    padding: 70px;
-    transition: 3s;
-    transition-duration: 2s;
+ display: flex;
+ padding: 90px 20px;
+ justify-content: space-between;
+
 }
 
-.intergrate-service img{
+.intergrate-service-item img{
     height: 470px;
-    max-width: 30vw;
-    position: relative;
+    width: 300px;
 }
 
 .integrate-service-item h1{
@@ -714,7 +795,7 @@ padding: 30px;
 .integrate-service-item h3 {
     font-size: 25px;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: 300;
+    font-weight: 500;
     color: var(--bg-primary-color);
 }
 
@@ -790,7 +871,7 @@ padding: 30px;
     flex-direction: column;
     min-height: 75vh;
     width: 100%;
-    background:linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, .8) ), url('../assets/map2.webp');
+    background:linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, .7) ), url('../assets/map2.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -810,12 +891,16 @@ padding: 30px;
 }
 /*Careers*/
 .careers{
+    display: flex;
+    flex-direction: column;
     min-height: 75vh;
-    min-width: 10vh;
-    background:linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, .8) ), url('../assets/job-vacancy.jpg ');
+    min-width: 100%;
+    background:linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, .7) ), url('../assets/job-vacancy.jpg ');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
     color:white;
 }
 
@@ -941,12 +1026,16 @@ padding: 30px;
 
 
 .news{
+    display: flex;
+    flex-direction: column;
     min-height: 63vh;
     min-width: 10vh;
     background:linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('../assets/Daily-news.webp');
     background-size:cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-position: center;
+    width: 100%;
 }
 .news h2{
     color:#fff;
@@ -1327,15 +1416,18 @@ article{
     .home{
       max-height: 40vh;
     }
+
     .nav_menu{
+        height: 80vh;
         position: fixed;
-        top:-100%;
+        top:100%;
         left: 0;
         background: rgba(0, 0, 0, 0.8);
-        padding-block: 4.5rem 4rem;
-        transition: top .4s;
-        width:100% ;
+        padding-block: 1rem 4rem;
+        transition: top .7s;
+        width:50% ;
     }
+
     .nav_list{
         display: flex;
         flex-direction: column;
@@ -1344,7 +1436,193 @@ article{
         justify-content: center;
     }
 
-    .nav_toggle{
+    .menu-btn{
+        opacity: 1;
+    }
+    .nav_links{
+        color: #fff;
+        transition: 3s;
+    }
+    .nav_close{
+        position: absolute;
+        text-align: right;
+        top: 1.20rem;
+        right: 1.5rem;
+        opacity: 1;
+    }
+    .show{
+        top: 0;
+    }
+    .home h1{
+        color: #fff;
+        font-size: 1.9rem;
+    }
+    
+    .lg-heading{
+    padding-top: 6rem;
+    display: inline-block;
+    font-size: 1.8rem;
+    color:var(--bg-primary-color);
+    position: relative;
+    letter-spacing: .1rem;
+
+}
+.wrapper{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+    h1{
+        font-size: 1.5rem;
+    }
+    .text h1{
+        font-size: 22px;
+    }
+    .team-container{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px 20px;
+    }
+    .team-container .team img{
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .services-container{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .services-item{
+        height: 300px;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 10px;
+    }
+
+.services-item h3 {
+    padding: 20px 0;
+}
+
+.services-item p{
+    display: block;
+    padding: 15px ;
+}
+
+.services-item img{
+    width: 68px;
+    height: 60px;
+
+}
+
+.gallery-container{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+
+}
+
+.gallery-item img {
+    height: 200px;
+    width: 100%;
+}
+.office-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 15px ;
+}
+.offices-container{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.offices-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.academy-item{
+    height: 250px;
+    width: 300px;
+}
+
+.academy-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.partners-container{
+    width: 100%;
+    height: auto;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.partners-item img{
+    padding-bottom: 20px;
+    height: 60px;
+    width: 100px;
+
+}
+.partners-item {
+    padding: 15px 10px;
+}
+
+.news-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+article ,.news-item  h1{
+    font-size: 18px;
+}
+}
+
+@media screen and (max-width:503px) {
+    .logo img{
+        width: 60px;
+        height: 55px;
+    }
+    .home{
+      max-height: 40vh;
+    }
+
+    .nav_menu{
+        height: 80vh;
+        position: fixed;
+        top:100%;
+        left: 0;
+        background: rgba(0, 0, 0, 0.8);
+        padding-block: 1rem 4rem;
+        transition: top .7s;
+        width:50% ;
+    }
+
+    .nav_list{
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .menu-btn{
         opacity: 1;
     }
     .nav_links{
@@ -1430,7 +1708,13 @@ article{
     height: 200px;
     width: 100%;
 }
-
+.office-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 15px ;
+}
 .offices-container{
     display: grid;
     grid-template-columns: 1fr;
@@ -1467,5 +1751,15 @@ article{
 }
 .partners-item {
     padding: 15px 10px;
+}
+
+.news-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+article ,.news-item  h1{
+    font-size: 18px;
 }
 }
