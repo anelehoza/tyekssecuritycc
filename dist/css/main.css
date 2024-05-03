@@ -192,8 +192,8 @@ body{
     width: 100%;
     top: -3rem;
     text-align: center;
-    overflow: hidden;
-    line-height: 10rem;
+    overflow-x: hidden;
+    line-height: 1rem;
 }
 
 .about-container{
@@ -278,8 +278,8 @@ padding: 30px;
 .team img{
     display: flex;
     justify-content: center;
-    width: 60px;
-    height: 65px;
+    width: 95px;
+    height: 95px;
     border-radius: 50% ;
     margin: 3px 0px 3px 25px;
     object-fit: cover;
@@ -836,34 +836,34 @@ padding: 30px;
     top: -3rem;
     text-align: center;
     overflow: hidden;
-    line-height: 10rem;
+    line-height: 1rem;
 }
 
 
 .office-container{
     display: flex;
-    width: 90%;
-    justify-content: center;
-    align-self: center;
-    text-align: center;
-    margin: 15px 30px;
-}   
-.office-item h4, .office-item p{
+    height: auto;
+    width:100%;
+    align-items: center;
+    padding: 0px 40px;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 15px 45px;
+}  
+
+.office-item {
+    height: 250px;
+    width: 350px;
     display: flex;
     flex-direction: column;
-} 
+    align-items: center;
+    padding: 5px 40px;
+}
 .office-item img{
     height: 350px;
     width: 450px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-}
-
-.offices-container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin: 0 auto;
 }
 
 .offices-home {
@@ -1408,7 +1408,7 @@ article{
   }
 
 
-@media screen and (max-width:1023px) {
+@media only screen and (max-width:1023px) {
     .logo img{
         width: 60px;
         height: 55px;
@@ -1668,6 +1668,7 @@ article ,.news-item  h1{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        align-items: center;
     }
     .services-item{
         height: 300px;
@@ -1713,7 +1714,6 @@ article ,.news-item  h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 15px ;
 }
 .offices-container{
     display: grid;
@@ -1724,6 +1724,10 @@ article ,.news-item  h1{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.office-item img{
+    height: 380px;
+    width: 350px;
 }
 .academy-item{
     height: 250px;
