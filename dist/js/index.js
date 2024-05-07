@@ -4,7 +4,6 @@ window.onload = function(){
 const navMenu = document.getElementById('nav-menu')
 const navToggle = document.getElementById('nav-toggle')
 const navClose = document.getElementById('nav-close')
-
 const menu_button = document.getElementById('menu-button')
 const menu_close = document.getElementById('menu-close')
  
@@ -47,8 +46,7 @@ $(document).ready(function(){
        $('.back-to-top').fadeOut('slow');
    }
  });
- $('.back-to-top').click(function (e) {
-   e.preventDeault()
+ $('.back-to-top').click(function () {
    $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
    return false;
  });
@@ -76,6 +74,8 @@ $(document).ready(function(){
             $('.back-to-top').fadeOut('slow');
         }
      })
+
+     const news_container = document.getElementById('news-container')
 }
 
 

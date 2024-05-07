@@ -153,7 +153,7 @@ body{
 }
 
 .home .wave{
-    position: relative;
+    position: absolute;
     bottom: -.5rem;
     top: 510px;
     left: 0;
@@ -208,14 +208,11 @@ padding: 30px;
     width: 100%;
 }
 
-.text p{
-  
-}
-
 .text h1 {
     font-size: 28px;
     padding-top: 30px;
 }
+
 .text p{
     font-size: 19px;
     padding-top: 20px;
@@ -232,21 +229,23 @@ padding: 30px;
     top: -3rem;
     text-align: center;
     overflow: hidden;
-    line-height: 10rem;
+    line-height: 1rem;
 }
 
 .team-container{
     width: 100%;
+    height: 500px;
+    padding: 0 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px;
     background:linear-gradient(rgba(0, 0, 0, .7),rgba(0, 0, 0, 0.7)),url('../assets/team.jpg') ;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment:fixed;
+    background-position: center;
     object-fit: cover;
-    height: 500px;
+    
 }
  .text h1{
     padding: 15px;
@@ -258,6 +257,7 @@ padding: 30px;
     justify-content: space-between;
     align-items: center;
     margin: 0 2px;
+    padding: 0 28px;
 }
 
 .team h3{
@@ -309,7 +309,7 @@ padding: 30px;
     top: -3rem;
     text-align: center;
     overflow: hidden;
-    line-height: 10rem;
+    line-height: 1rem;
 }
 
 .services-container{
@@ -386,13 +386,49 @@ padding: 30px;
     padding-top:50px;
 }
 
+.armed-gaurds {
+    padding: 0 30px;
+}
+
+.armed-gaurds h1{
+    font-size: 48px;
+    color:var(--bg-primary-color);
+}
+.armed-gaurds h3{
+    width: 70%;
+    font-size: 18px;
+    font-family: 600;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    z-index: 10;
+}
+.gaurds-accordion h1{
+    font-size: 30px;
+    color:var(--bg-primary-color);
+}
+.armed-gaurds button{
+    width: 180px;
+    height: 50px;
+    color: white;
+    background-color: var(--bg-primary-color);
+    font-size: 2rem;
+    border-radius: 25px;
+    border: none;
+    
+}
+.armed-gaurds li::marker{
+    color: var(--bg-primary-color);
+    list-style: none;
+}
+
 .security-item {
     height: 700px;
     width:100%;
     display: grid;
     grid-template-columns:60% 40%;
     gap:40px;
-    padding: 30px;
+    padding: 30px ;
 }
 .security-item img{
       min-height: 25vh;
@@ -455,11 +491,10 @@ padding: 30px;
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 300;
-    z-index: 10;
 }
 
 .electronic-container{
-    height: 700px;
+    height: auto;
     width:100%;
     display: grid;
     padding: 20px;
@@ -539,7 +574,7 @@ padding: 30px;
   }
 
   .acess-control{
-    height: 700px;
+    height: auto;
     width:100%;
     display: grid;
     padding: 30px;
@@ -633,7 +668,7 @@ padding: 30px;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    object-fit: cover;
+    
 }
 .patrols{
     color:white;
@@ -643,7 +678,6 @@ padding: 30px;
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 300; 
-    z-index: 10;
 }
 .patrol-security{
     height: 700px;
@@ -654,7 +688,7 @@ padding: 30px;
    
 }
 .patrol-item{
-    height: 700px;
+    height: auto;
     width:100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -698,7 +732,7 @@ padding: 30px;
     width: 450px;
 }
 .monitoring-section{
-    height: 500px;
+    height: auto;
     width: 100%;
     background:linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/control-room.jpg');
     background-size:cover;
@@ -753,7 +787,6 @@ padding: 30px;
     background-position: center;
     object-fit: cover;
     color:white;
-
 }
 
 .intergrate-service-container{
@@ -767,10 +800,11 @@ padding: 30px;
     line-height: 1.5;
     font-size: 18px;
 }
+
 .integrate-service-item{
  display: flex;
- padding: 90px 20px;
- justify-content: space-between;
+ padding: 70px 20px;
+ width: 100%;
 
 }
 
@@ -844,10 +878,11 @@ padding: 30px;
     display: flex;
     height: auto;
     width:100%;
+    justify-content: center;
     align-items: center;
-    padding: 0px 40px;
     grid-template-columns: repeat(3, 1fr);
-    margin: 15px 45px;
+    padding-top: 20px;
+    
 }  
 
 .office-item {
@@ -1409,6 +1444,14 @@ article{
 
 
 @media only screen and (max-width:1023px) {
+    .home {
+        min-height: 85vh;
+        width: 100%;
+    }
+    .home .wave {
+        top: 375px;
+        height: 6.1rem;
+    }
     .logo img{
         width: 60px;
         height: 55px;
@@ -1418,7 +1461,7 @@ article{
     }
 
     .nav_menu{
-        height: 80vh;
+        height: auto;
         position: fixed;
         top:100%;
         left: 0;
@@ -1465,14 +1508,7 @@ article{
     color:var(--bg-primary-color);
     position: relative;
     letter-spacing: .1rem;
-
 }
-.wrapper{
-    position: relative;
-    height: 100vh;
-    width: 100%;
-}
-
     h1{
         font-size: 1.5rem;
     }
@@ -1493,6 +1529,9 @@ article{
         background-repeat: no-repeat;
     }
 
+    .services-home {
+        min-height: 60vh;
+    }
     .services-container{
         height: auto;
         display: flex;
@@ -1523,6 +1562,122 @@ article{
     height: 60px;
 
 }
+.onsite-guard {
+    min-height: 60vh;
+}
+.security-item{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 30px;
+}
+.security h1{
+    font-size: 18px;
+}
+.elec-security{
+    min-height: 65vh;
+    width: 100%;
+}
+.electronic-container {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+.electronic-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.cctv-installation{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+.alarm{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.alarm img {
+    width: 400px;
+    height: 300px;
+}
+.access-control {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.access-control-item{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.access-control-item img {
+    width: 700px;
+}
+
+.patrols{
+   min-height: 60vh;
+   width: 100%s;
+}
+
+.patrol-security-container {
+    height: auto;
+    display: flex;
+    width: 100%;
+    padding: 30px 20px;
+    padding-bottom: 30px;
+}
+.patrol-item {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.patrol-item img{
+    height: 300px;
+    width: 350px;
+}
+
+.monitoring-container{
+    height: auto;
+    width: 100%;
+}
+
+.intergrate-service-container {
+    width: 100%;
+    height: auto;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 20px;
+}
+.integrate-service-item{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 20px;
+}
+.integrate-service-item h1 {
+    font-size: 18px;
+}
+.intergrate-service-item img{
+    height: 470px;
+    width: 330px;
+}
 
 .gallery-container{
     height: auto;
@@ -1531,7 +1686,6 @@ article{
     justify-content: space-between;
     align-items: center;
     padding: 50px;
-
 }
 
 .gallery-item img {
@@ -1592,178 +1746,17 @@ article{
 article ,.news-item  h1{
     font-size: 18px;
 }
-}
-
-@media screen and (max-width:503px) {
-    .logo img{
-        width: 60px;
-        height: 55px;
-    }
-    .home{
-      max-height: 40vh;
-    }
-
-    .nav_menu{
-        height: 80vh;
-        position: fixed;
-        top:100%;
-        left: 0;
-        background: rgba(0, 0, 0, 0.8);
-        padding-block: 1rem 4rem;
-        transition: top .7s;
-        width:50% ;
-    }
-
-    .nav_list{
-        display: flex;
-        flex-direction: column;
-        row-gap: 1rem;
-        text-align: center;
-        justify-content: center;
-    }
-
-    .menu-btn{
-        opacity: 1;
-    }
-    .nav_links{
-        color: #fff;
-        transition: 3s;
-    }
-    .nav_close{
-        position: absolute;
-        text-align: right;
-        top: 1.20rem;
-        right: 1.5rem;
-        opacity: 1;
-    }
-    .show{
-        top: 0;
-    }
-    .home h1{
-        color: #fff;
-        font-size: 1.9rem;
-    }
-    h1{
-        font-size: 2rem;
-    }
-    .text h1{
-        font-size: 22px;
-    }
-    .team-container{
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        margin: 20px 20px;
-    }
-    .team-container .team img{
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-
-    .services-container{
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .services-item{
-        height: 300px;
-        width: 300px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 10px;
-    }
-
-.services-item h3 {
-    padding: 20px 0;
-}
-
-.services-item p{
-    display: block;
-    padding: 15px ;
-}
-
-.services-item img{
-    width: 68px;
-    height: 60px;
-
-}
-
-.gallery-container{
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px;
-
-}
-
-.gallery-item img {
-    height: 200px;
+.post{
+    height: 400px;
     width: 100%;
-}
-.office-container{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background-color: #00bfff;
 }
-.offices-container{
-    display: grid;
-    grid-template-columns: 1fr;
-}
-
-.offices-item{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.office-item img{
-    height: 380px;
-    width: 350px;
-}
-.academy-item{
-    height: 250px;
+.post-item {
+    height: 350px;
     width: 300px;
-}
-
-.academy-container{
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    padding: 20px;
 }
 
-.partners-container{
-    width: 100%;
-    height: auto;
-    display:grid;
-    grid-template-columns: repeat(3,1fr);
-}
-.partners-item img{
-    padding-bottom: 20px;
-    height: 60px;
-    width: 100px;
-
-}
-.partners-item {
-    padding: 15px 10px;
-}
-
-.news-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-article ,.news-item  h1{
-    font-size: 18px;
-}
 }
