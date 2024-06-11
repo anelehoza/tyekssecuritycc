@@ -11,17 +11,20 @@
   "license": "MIT",
   "description": "Responsive website",
   "devDependencies": {
-    "gh-pages": "^6.1.1"
+    "gh-pages": "^6.1.1",
+    "nodemon": "^3.1.0"
   },
   "dependencies": {
     "array-union": "^1.0.2",
     "array-uniq": "^1.0.3",
     "async": "^3.2.5",
     "balanced-match": "^1.0.2",
+    "body-parser": "^1.20.2",
     "brace-expansion": "^1.1.11",
     "commander": "^11.1.0",
     "commondir": "^1.0.1",
     "concat-map": "^0.0.1",
+    "cors": "^2.8.5",
     "email-addresses": "^5.0.0",
     "escape-string-regexp": "^1.0.5",
     "express": "^4.19.2",
@@ -56,5 +59,6 @@
     "trim-repeated": "^1.0.0",
     "universalify": "^2.0.1",
     "wrappy": "^1.0.2"
-  }
+  },
+  "keywords": []
 }
