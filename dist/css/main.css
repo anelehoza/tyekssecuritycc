@@ -528,7 +528,7 @@ padding: 30px;
 
   }
   .cctv-installation{
-    height: 1300px;
+    height: 1100px;
     width: 100%;
     background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('../assets/cctv-camera-installation-services.jpg');
     background-attachment: fixed;
@@ -574,7 +574,7 @@ padding: 30px;
   }
 
   .acess-control{
-    height: auto;
+    height: 700px;
     width:100%;
     display: grid;
     padding: 30px;
@@ -809,8 +809,8 @@ padding: 30px;
 }
 
 .intergrate-service-item img{
-    height: 470px;
-    width: 300px;
+    height: 550px;
+    width: 370px;
 }
 
 .integrate-service-item h1{
@@ -856,10 +856,10 @@ padding: 30px;
     display: flex;
     height: 250px;
     width: 250px;
-    background-position: center;
     background-size: cover;
+    background-position: center;
     object-fit: cover;
-
+    object-position: center;
 }
 
 /*Offices Section*/
@@ -938,7 +938,34 @@ padding: 30px;
     background-repeat: no-repeat;
     color:white;
 }
-
+.career-heading p{
+    text-align: center;
+    font-size: 22px;
+}
+.career {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.career-form {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+}
+.career-form-txt{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+.radio-class{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+}
 /*Academy Section*/
 
 .academy{
@@ -949,6 +976,19 @@ padding: 30px;
     overflow: hidden;
     line-height: 10rem;  
 }
+.academy-home{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 70vh;
+    background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, .5) ), url('../assets/academy-1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    object-fit: cover;
+    color:white; 
+    }
 
 .academy-container{
     height:auto;
@@ -980,9 +1020,12 @@ padding: 30px;
 }
 
 .role-of-gaurd{
-    background: url('../assets/security-guard2.jpg');
+    background: url('../assets/security-gaurd-2.jpg');
     background-size: cover;
-    background-position: center;
+    object-fit: cover;
+}
+.role-of-gaurd img{
+    object-position: center;
     object-fit: cover;
 }
 
@@ -995,7 +1038,6 @@ padding: 30px;
 .use-of-force{
     background: url('../assets/gaurds-3.JPG');
     background-size: cover;
-    background-position: center;
     object-fit: cover;
 }
 
