@@ -299,7 +299,6 @@ padding: 30px;
     background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('../assets/intrated-bg.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
     color:white;
     object-fit: cover;    
 }
@@ -968,6 +967,10 @@ padding: 30px;
     background-position: center;
     background-repeat: no-repeat;
     color:white;
+}
+
+.careers img {
+    background-repeat: center;
 }
 .career-heading p{
     text-align: center;
