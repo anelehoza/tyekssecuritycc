@@ -57,6 +57,7 @@ body{
     justify-content: space-between;
     padding: 10px 25px;
     margin-top: 30px;
+    z-index: 200;
 }
 .nav_list{
     display: flex;
@@ -138,7 +139,7 @@ body{
     padding: 0 1rem;
     position: absolute;
     overflow: hidden !important;
-    background:linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7) ), url('../assets/home.jpg');
+    background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8) ), url('../assets/home.jpg');
     object-fit: cover;
     background-size: cover;
     background-position: center;
@@ -845,11 +846,13 @@ padding: 30px;
 }
 
 .gallery-container {
+
     display: flex;
-    height: auto;
+    height: 100%;
     width:100%;
     flex-wrap: wrap;
-    padding: 0 20px;
+    margin: 10px;
+    align-items: center;
 
 }
 .gallery-item {
@@ -857,11 +860,39 @@ padding: 30px;
     height: 250px;
     width: 250px;
     background-size: cover;
-    background-position: center;
     object-fit: cover;
     object-position: center;
+    cursor: pointer;
 }
-
+.image-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: all 1s;
+    background-color: #000;
+    /* background: hsla(0,0%,0%, 0) */
+    
+  }
+.gallery-modal{
+  background-size: cover;
+  background-position: center center;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  /* border-top-right-radius: 5px;
+  border-top-left-radius: 5px; */
+  cursor: pointer;
+  transition: all .5s;
+}
 /*Offices Section*/
 
 .office{
@@ -1526,8 +1557,8 @@ article{
         width: 100%;
     }
     .home .wave {
-        top: 375px;
-        height: 6.1rem;
+        top: 385px;
+        height: 5.4rem;
     }
     .logo img{
         width: 60px;
@@ -1538,7 +1569,7 @@ article{
     }
 
     .nav_menu{
-        height: auto;
+        height: 450px;
         position: fixed;
         top:100%;
         left: 0;
@@ -1546,14 +1577,16 @@ article{
         padding-block: 1rem 4rem;
         transition: top .7s;
         width:50% ;
+        z-index: 100;
     }
 
     .nav_list{
         display: flex;
         flex-direction: column;
-        row-gap: 1rem;
+        row-gap: 0.4rem;
         text-align: center;
         justify-content: center;
+
     }
 
     .menu-btn{
@@ -1577,6 +1610,7 @@ article{
         color: #fff;
         font-size: 1.9rem;
     }
+
     
     .lg-heading{
     padding-top: 6rem;
@@ -1611,8 +1645,10 @@ article{
     }
     .services-container{
         height: auto;
+        width: 100%;
         display: flex;
         flex-direction: column;
+        align-items: center;
         justify-content: space-between;
     }
     .services-item{
@@ -1776,15 +1812,16 @@ article{
     align-items: center;
     margin: 0 15px ;
 }
-.offices-container{
-    display: grid;
-    grid-template-columns: 1fr;
-}
 
 .offices-item{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.office-item img {
+    height: 300px;
+    width: 350px;
 }
 .academy-item{
     height: 250px;
@@ -1798,6 +1835,19 @@ article{
     align-items: center;
 }
 
+.clients-container{
+    width: 100%;
+    height: auto;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.clients-item img{
+    padding-bottom: 20px;
+    height: 60px;
+    width: 100px;
+
+}
+
 .partners-container{
     width: 100%;
     height: auto;
@@ -1806,7 +1856,7 @@ article{
 }
 .partners-item img{
     padding-bottom: 20px;
-    height: 60px;
+    height: 80px;
     width: 100px;
 
 }
