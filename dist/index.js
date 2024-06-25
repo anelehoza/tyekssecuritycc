@@ -28,7 +28,23 @@ if(!show_menu){
 }
 
      //gallery modal full-image view
+// const modal = document.getElementById("myModal")
 
+// const img = document.getElementById("myimage")
+// const modalImg = document.getElementById("modal-image")
+
+// img.addEventListener('click', () =>{
+//   alert('hello')
+//   modal.style.display = "block"
+//   modalImg.src = this.src
+// })
+
+// // span close
+//  const span = document.getElementsByClassName('close-gallery')[0]
+
+//  span.addEventListener('click', () => {
+//   modal.style.display = "none"
+//  })
 }
 
 
@@ -45,7 +61,7 @@ $(document).ready(function(){
       }
       
   });
-
+//Back to top
   $(window).scroll(function () {
    if ($(this).scrollTop() > 100) {
        $('.back-to-top').fadeIn('slow');
@@ -62,6 +78,46 @@ $(document).ready(function(){
  });
 
 
+const prev = document.getElementById("prev")
 
+prev.addEventListener('click', () =>{
+  alert('clicked')
+})
 
+// Open Modal
+function openModal() {
+   document.getElementById("myModal").style.display = "block"
+}
 
+// span close
+function closeModal(){
+  document.getElementById("myModal").style.display = "none"
+  
+}
+ 
+//Modal slider image
+
+const slideIndex = 1
+showSlides(slideIndex)
+
+function plusSlides(n) {
+  showSlides(slideIndex += n)
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n)
+}
+
+function showSlides(n) {
+  var i;
+var slides = document.getElementsByClassName("mySlides")
+ if (n > slides.length) {
+   slideIndex = 1
+ }
+ if (n < 1){slideIndex = slides.length}
+  for(i =0; i < slides.length; i++){
+     slides[i].style.display = "none"
+    }
+  slides[slideIndex-1].style.display = "block"
+  
+ }
