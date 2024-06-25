@@ -30,7 +30,6 @@ body{
 }
 .wrapper{
     position: relative;
-    height: 60vh;
     width: 100%;
 }
 .header {
@@ -130,6 +129,7 @@ body{
 }
 .home{
     top: 0;
+    height: 100%;
     min-height: 100vh;
     width: 100vw;
     display: flex;
@@ -137,7 +137,7 @@ body{
     justify-content: center;
     text-align: center;
     padding: 0 1rem;
-    position: absolute;
+    position: relative;
     overflow: hidden !important;
     background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8) ), url('../assets/home.jpg');
     object-fit: cover;
@@ -147,10 +147,12 @@ body{
 }
 
 .home h1{
+    position: relative;
     color: #fff;
-    font-size: 5.5rem;
+    font-size: 6.5rem;
     width: 100%;
     height: 100%;
+    transition-delay: 20s;
 }
 
 .home .wave{
@@ -164,7 +166,7 @@ body{
     background-size: 100rem 11rem;
     animation: waves 8s linear infinite;
     background-repeat: repeat-x;
-    z-index: 1;
+    
 }
 
 .home .wave2{
@@ -186,6 +188,26 @@ body{
         background-position-x: 100rem;
     }
 }
+
+.image-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 1px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    transition-duration: all ease 3s;
+    
+    background: url('../assets/airport.jpg');
+    /* background: hsla(0,0%,0%, 0) */
+    
+    
+  }
 
 /*About Section*/
 
@@ -845,53 +867,117 @@ padding: 30px;
 }
 
 .gallery-container {
-
-    display: flex;
     height: 100%;
-    width:100%;
-    flex-wrap: wrap;
-    margin: 10px;
-    align-items: center;
-
+    width:95%;
+    display: grid;
+    grid-template-columns: repeat(5 ,1fr);
+    gap: 10px;
+    margin: 5px 3px;
+    padding: 10px;
 }
 .gallery-item {
     display: flex;
-    height: 250px;
-    width: 250px;
+    height: 190px;
+    width: 100%;
+    max-width: 300px;
+    cursor: pointer;
+    transition: 0.3s;
     background-size: cover;
     object-fit: cover;
-    object-position: center;
-    cursor: pointer;
 }
-.image-overlay {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: all 1s;
-    background-color: #000;
-    /* background: hsla(0,0%,0%, 0) */
-    
+
+
+.gallery-item img {
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    opacity: 0.7;
   }
-.gallery-modal{
-  background-size: cover;
-  background-position: center center;
-  background-color: #000;
+  .gallery-item img:hover {
+    opacity: 1.5;
+    transform: translateY(-15px);
+    transition: 1s ease-in-out;
+  }
+
+  /*Galary light-box*/
+  .gallery-container > .gallery-item {
+    padding: 0 4px;
+  }
+  
+  .gallery-container:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.modal {
+  display:none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
-  position: relative;
-  /* border-top-right-radius: 5px;
-  border-top-left-radius: 5px; */
-  cursor: pointer;
-  transition: all .5s;
+  overflow:auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0,0.9);
 }
+.modal-content {
+    position: relative;
+    margin: auto;
+    width: 90%;
+    max-width: 500px;
+  }
+.modal img {
+    margin-bottom:-4px;
+  }
+  /* The Close Button */
+.close-gallery {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  
+  .close-gallary:hover,
+  .close-gallery:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .prev, .next {
+    cursor:pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: #eee;
+    font-weight: bold;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  .prev{
+    left: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .mySlides {
+    display: none;
+  }
+  
+  
 /*Offices Section*/
 
 .office{
@@ -1556,21 +1642,19 @@ article{
 
 @media only screen and (max-width:1023px) {
     .home {
-        min-height: 85vh;
-        width: 100%;
+        min-height: 70vh;
     }
+  
     .home .wave {
-        top: 385px;
+        
+        top: 330px;
         height: 5.4rem;
     }
     .logo img{
         width: 60px;
         height: 55px;
     }
-    .home{
-      max-height: 40vh;
-    }
-
+  
     .nav_menu{
         height: 450px;
         position: fixed;
@@ -1801,13 +1885,19 @@ article{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 50px;
+    
 }
 
 .gallery-item img {
-    height: 200px;
+    height: 150px;
     width: 100%;
 }
+@media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+  }
+  
 .office-container{
     display: flex;
     flex-direction: column;

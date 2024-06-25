@@ -162,46 +162,122 @@
                 <p>Tyeks Security Services’s Integrated Services division can provide a range of services that supplement Unified Security’s core product. <a href="intergrated.html">Read More</a></p>
         </div> 
     </div>
-</section>
-
+</section>   
     <section class="gallery gallery-section" id="gallery">
         <div class="lg-heading">
             <h1>OUR GALLERY</h1>
-        </div>
+        </div>        
         <div class="gallery-container">
-            <div class="gallery-item " id="gallery-item">
-                <img src="./assets/home2.jpg" alt="security picture" id="gallery-item">
-        </div>
+            <div class="gallery-item">
+              <img src="./assets/home2.jpg" alt="building image" onclick="openModal(), currentSlide(1)"> 
+            </div>
          <div class="gallery-item ">
-                <img src="./assets/car3.jpg" alt="airpot picture">
+            <img src="./assets/car3.jpg" alt="cars infront" onclick="openModal(), currentSlide(2)">    
         </div>
         <div class="gallery-item">
-                <img src="./assets/car2 - Copy.jpg" alt="car2 image">
+            <img  src="./assets/car2 - Copy.jpg" alt="polo cars" onclick="openModal(), currentSlide(3)">   
             </div>
             <div class="gallery-item">
-                <img src="./assets/car1 - Copy.jpg" alt="photo image">
+                <img src="./assets/vehicles.jpg" alt="photo image" onclick="openModal(), currentSlide(4)">    
             </div>
             <div class="gallery-item">
-                <img src="./assets/vehicles.jpg" alt="security picture">
+                <img src="./assets/patrol.jpg" alt="security picture" onclick="openModal(), currentSlide(5)">    
         </div>
             <div class="gallery-item">
-                <img src="./assets/photo-1.jpg" alt="control room image">
-            </div>
-            <div class="gallery-item" id="gallery-item">
-                <img src="./assets/IMG_3286.jpg" alt="">
+                <img src="./assets/IMG_3286.jpg" alt="control room image" onclick="openModal(), currentSlide(6)">    
             </div>
             <div class="gallery-item">
-                <img src="./assets/img.jpg" alt="">
+                <img src="./assets/img.jpg" alt="" onclick="openModal(), currentSlide(7)">    
             </div>
             <div class="gallery-item">
-                <img src="./assets/tactical-1.jpg" alt="security with dog">
+                <img src="./assets/photo-1.jpg" alt="" onclick="openModal(), currentSlide(8)">    
             </div>
             <div class="gallery-item">
-                <img src="./assets/parade2.jpg" alt="parade-image">
+                <img src="./assets/car1 - Copy.jpg" alt="security with dog" onclick="openModal(), currentSlide(9)">
             </div>
-            
-    </div>
-    <div class="modal-window" id="modal-window"></div>
+            <div class="gallery-item">
+                <img  src="./assets/parade2.jpg" alt="parade-image" onclick="openModal(), currentSlide(10)">   
+            </div>
+   
+    <div class="modal" id="myModal">
+        <div class="modal-content">
+            <div class="mySlides" >
+                <img src="./assets/home2.jpg" alt="building image" style="width: 100%"> 
+            </div>
+
+                <div class="mySlides">
+                    <img src="./assets/car3.jpg" alt="cars infront" style="width: 100%">    
+                </div>
+                
+            <div class=" mySlides">
+                <img src="./assets/car2 - Copy.jpg" alt="polo cars" style="width: 100%">   
+                </div>
+
+                <div class="mySlides">
+                    <img src="./assets/vehicles.jpg" alt="photo image" style="width: 100%">    
+                </div>
+
+                <div class="mySlides">
+                    <img src="./assets/patrol.jpg" alt="security picture" style="width: 100%">    
+            </div>
+
+                <div class="mySlides">
+                    <img src="./assets/IMG_3286.jpg" alt="control room image" style="width: 100%">    
+                </div>
+
+                <div class="mySlides">
+                    <img src="./assets/img.jpg" alt="" style="width: 100%">    
+                </div>
+
+                <div class="mySlides">
+                    <img src="./assets/photo-1.jpg" alt="" style="width: 100%">    
+                </div>
+
+                <div class="mySlides">
+                    <img src="./assets/car1 - Copy.jpg" alt="security with dog" style="width: 100%" >
+                </div>
+
+                <div class="mySlides">
+                    <img src="./assets/parade2.jpg" alt="parade-image" style="width: 100%">   
+                </div>   
+        </div>
+        <div class="gallery-container">
+            <div class="gallery-item">
+              <img src="./assets/home2.jpg" alt="building image" onclick="currentSlide(1)"> 
+            </div>
+         <div class="gallery-item ">
+            <img src="./assets/car3.jpg" alt="cars infront" onclick="currentSlide(2)">    
+        </div>
+        <div class="gallery-item">
+            <img  src="./assets/car2 - Copy.jpg" alt="polo cars" onclick="currentSlide(3)">   
+            </div>
+            <div class="gallery-item">
+                <img src="./assets/vehicles.jpg" alt="photo image" onclick="currentSlide(4)">    
+            </div>
+            <div class="gallery-item">
+                <img src="./assets/patrol.jpg" alt="security picture" onclick="currentSlide(5)">    
+        </div>
+            <div class="gallery-item">
+                <img src="./assets/IMG_3286.jpg" alt="control room image" onclick="currentSlide(6)">    
+            </div>
+            <div class="gallery-item">
+                <img src="./assets/img.jpg" alt="" onclick="currentSlide(7)">    
+            </div>
+            <div class="gallery-item">
+                <img src="./assets/photo-1.jpg" alt="" onclick="currentSlide(8)">    
+            </div>
+            <div class="gallery-item">
+                <img src="./assets/car1 - Copy.jpg" alt="security with dog" onclick="currentSlide(9)">
+            </div>
+            <div class="gallery-item">
+                <img  src="./assets/parade2.jpg" alt="parade-image" onclick="currentSlide(10)">   
+            </div>
+        <span class="close-gallery" onclick="closeModal()">&times;</span>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+       
+       </div>
+</div>
  </section>
 <section class=" office office-section" id="office">
     <div class="lg-heading">
@@ -285,6 +361,13 @@
             <img src="./assets/sasseta.png" alt="sasseta image">
         </div>
     </div>
+
+    <div class="modal" id="myModal">
+        <img class="modal-content" id="gallery-image">
+           <span class="close-gallery">&times;</span>
+           <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+           <a class="next" onclick="plusSlides(1)">&#10095;</a>
+       </div>
  </section>
 
 
