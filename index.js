@@ -77,12 +77,27 @@ $(document).ready(function(){
  
  });
 
+ //Home section image slider
 
-const prev = document.getElementById("prev")
+ let homeIndex = 0
+ showHomeSlides()
 
-prev.addEventListener('click', () =>{
-  alert('clicked')
-})
+ function showHomeSlides() {
+  let i 
+  let homeSlides = document.getElementsByClassName("")
+  for (i = 0; i < homeSlides.length; i++) {
+    homeSlides[i].style.display ="none"
+  }
+  homeSlides++
+  if (homeIndex > homeSlides.length) {
+    slideIndex = 1
+  }
+  homeSlides[homeIndex-1].style.display = 0
+  setTimeout(showHomeSlides, 3000)
+ }
+
+
+
 
 // Open Modal
 function openModal() {
@@ -97,7 +112,7 @@ function closeModal(){
  
 //Modal slider image
 
-const slideIndex = 1
+var slideIndex = 1
 showSlides(slideIndex)
 
 function plusSlides(n) {
@@ -111,13 +126,23 @@ function currentSlide(n) {
 function showSlides(n) {
   var i;
 var slides = document.getElementsByClassName("mySlides")
- if (n > slides.length) {
-   slideIndex = 1
- }
+ if (n > slides.length) {slideIndex = 1}
  if (n < 1){slideIndex = slides.length}
-  for(i =0; i < slides.length; i++){
+  for(i = 0; i < slides.length; i++){
      slides[i].style.display = "none"
     }
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block"
   slides[slideIndex-1].style.display = "block"
   
  }
+ 
+ //partners slides
+
+ (function(){
+  var swiper = new Swiper('clients-containe',{
+    spaceBetween: 30,
+    effect: 'fade',
+    autoplay: true, 
+  })
+ })(jQuery)
