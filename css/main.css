@@ -128,7 +128,6 @@ body{
     transform: rotate(-45deg) translate(5px, -5px); 
 }
 .home{
-    top: 0;
     height: 100%;
     min-height: 100vh;
     width: 100vw;
@@ -166,10 +165,9 @@ body{
 
 .home .wave{
     position: absolute;
-    bottom: -.4rem;
-    top: 520px;
+    bottom: -.5rem;
     left: 0;
-    height: 7.8rem;
+    height: 11rem;
     width: 100%;
     background: url('../assets/wave.png');
     background-size: 100rem 11rem;
@@ -279,6 +277,7 @@ padding: 30px;
 }
 
 .text{
+    padding:3px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -294,7 +293,8 @@ padding: 30px;
 .text p{
     font-size: 19px;
     padding-top: 20px;
-    padding: 15px;
+    padding:0;
+    margin: 0;
     color: #555;
     line-height: 1.5;
 }
@@ -401,10 +401,12 @@ padding: 30px;
 
 .services-item{
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: column;
     width: 100%;
     height: 350px;
     padding-top: 30px;
+    padding: 3px;
 }
 .services-item h3 {
     display: flex;
@@ -863,8 +865,7 @@ padding: 30px;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center;
-    object-fit: cover;
+    background-position:center;
     color:white;
 }
 
@@ -1048,25 +1049,20 @@ padding: 30px;
 .office-container{
     display: flex;
     height: auto;
-    width:100%;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: repeat(3, 1fr);
-    padding-top: 20px;
-    
+    width:100%; 
 }  
 
 .office-item {
-    height: 250px;
-    width: 350px;
+    height: 350px;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 5px 40px;
+     padding-top: 20px;
+    padding: 30px;
 }
 .office-item img{
-    height: 350px;
-    width: 450px;
+    height: 450px;
+    width:550px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1289,11 +1285,10 @@ padding: 30px;
 
 .partners-container{
     width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: center;
     align-items: center;
-
+    margin: 0 auto;
 }
 
 .partners-item{
@@ -1302,9 +1297,7 @@ padding: 30px;
     display: flex;
     padding-top: 15px;
     padding-bottom:15px;
-
-    padding: 10px 20px;
-
+    padding: 10px 10px;
 }
 
 .partners-item img{
@@ -1452,6 +1445,7 @@ article{
 .footer .footer-top .footer-contact p {
     color: #ffffff;
     line-height: 26px;
+    font-size: 14px;
 }
 
 .footer .footer-top .footer-newsletter input[type="email"] {
@@ -1683,48 +1677,32 @@ article{
     align-items: center;
     text-align:center;
     font-size: 14px;
-    color: #eee;
+    color: #ccc;
     background-color: #111;
     margin: 0 auto;
 }
-.swiper {
-    width: 100%;
-    height: 100%;
-    padding: 50px 20px;
-    overflow: visible;
-  }
 
 
 @media only screen and (max-width:1023px) {
-    .home {
-        top: 0;
-        min-height: 80vh;
-        width: 100vw;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;  
-    }
-
+ 
+  .home .home-title{
+    font-size: 3.5rem;
+  }
   .image-overlay {
-     height: 90px;
+     height: 130px;
   }
 
   .image-overlay p{
     top: 10px;
     position: absolute;
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 2.5rem;
     transition-delay: 10s;
     animation: 15s ease-in-out 0s 1 slidefrombottom;
     z-index: 2;
     padding: 20px;
  
   }
-    .home .wave {
-        top: 365px;
-        height: 5.4rem;
-    }
     .logo img{
         width: 65px;
         height: 75px;
@@ -1735,7 +1713,7 @@ article{
         position: fixed;
         top:100%;
         left: 0;
-        background: rgba(0, 0, 0, 0.8);
+        background: rgba(128, 125, 125, 0.8);
         padding-block: 1rem 4rem;
         transition: top .7s;
         width:50% ;
@@ -1770,12 +1748,12 @@ article{
     }
     .home h1{
         color: #fff;
-        font-size: 1.9rem;
+        font-size: 2.9rem;
     }
     .lg-heading{
     padding-top: 6rem;
     display: inline-block;
-    font-size: 1.8rem;
+    font-size: 2.8rem;
     color:var(--bg-primary-color);
     position: relative;
     letter-spacing: .1rem;
@@ -1783,8 +1761,8 @@ article{
     h1{
         font-size: 1.5rem;
     }
-    h3, p{
-        font-size: 1.2rem;
+    h3, h2, p{
+        font-size: 1.8rem;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: 300;
     }
@@ -1797,7 +1775,6 @@ article{
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        margin: 20px 20px;
     }
     .team-container .team img{
         background-size: cover;
@@ -1939,15 +1916,11 @@ article{
     height: auto;
     display: flex; 
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding: 70px 20px;
 }
 .integrate-service-item{
     display: flex;
     flex-direction: column;
-    width: 100%;
-    padding: 20px 20px;
 }
 .integrate-service-item h1 {
     font-size: 18px;
@@ -1978,21 +1951,27 @@ article{
 
 }
 @media only screen and (max-width: 700px){
+
+   .home .home-title {
+        font-size: 3.8rem;
+     } 
     
-  }
-  
 .office-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 15px ;
+    
 }
 
-.offices-item{
+.office-item{
+    height: auto;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 15px;
+    line-height: 1.5rem;
 }
 
 .office-item img {
@@ -2015,7 +1994,7 @@ article{
     width: 100%;
     height: auto;
     display:grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(2,1fr);
 }
 .clients-item img{
     padding-bottom: 20px;
@@ -2028,16 +2007,16 @@ article{
     width: 100%;
     height: auto;
     display:grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(2,1fr);
 }
 .partners-item img{
     padding-bottom: 20px;
-    height: 80px;
+    height: 60px;
     width: 100px;
 
 }
 .partners-item {
-    padding: 15px 10px;
+    padding: 0px 10px ;
 }
 
 .news-container {
@@ -2061,5 +2040,11 @@ article ,.news-item  h1{
     display: flex;
     padding: 20px;
 }
+}
+@media (max-width: 1000px){
+    html{
+        font-size: 50%;
+    }
 
+}
 }
