@@ -1,22 +1,26 @@
-// //const mongoose = require('mongoose')
-// const express = require('express')
-// const cors = require('cors')
-// const bodyParser = require('body-parser')
-// const app = express()
-// const port = 3000
+const mongoose = require('mongoose')
+const express = require('express')
+const cors = require('cors')
+const bodyParser = require('body-parser')
+const articleRouter = require('./routes/articleRoute')
+const app = express()
+const port = 8000
 
-// // const MONGO_DB_CONNECTION_STRING = 'mongodb+srv://anelehoza:Qhawe&Khanyisa_@cluster0.xlubw34.mongodb.net/News'
+app.use(cors())
+app.use(bodyParser.json())
 
-// // mongoose
-// //         .connect(MONGO_DB_CONNECTION_STRING)
-// //         .then(() =>{
-// //             console.log(`database connected`)
-// //         })
-// //         .catch(err => console.log(err))
+mongoose.connect('mongodb://localhost:27017/News',{
+    useNewUrlParser: true,
+    useUnifiedTopology:true
+})
+        
+        .then(() =>{
+            console.log('database connected')
+    })
+          .catch(err => console.log(err))
 
-// app.use(cors())
-// app.use(bodyParser.json())
-
+ 
+app.use('/api/articles', articleRouter)
 
 // //Import Routes
 // // const postsRouter = require('./routes/post')
@@ -99,7 +103,7 @@
 // //app.use('/Posts', postsRouter)
 // //app.use(express.static('dist'))
 
-// app.listen(port, (req, res) => {
-//     console.log(`Server running on port ${port}`)
-// })
+app.listen(port, (req, res) => {
+     console.log(`Server running on port ${port}`)
+ })
 
