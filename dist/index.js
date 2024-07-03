@@ -146,3 +146,7 @@ var slides = document.getElementsByClassName("mySlides")
     autoplay: true, 
   })
  })(jQuery)
+
+ //New Page Section
+
+ 
