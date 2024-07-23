@@ -1,65 +1,109 @@
 const mongoose = require('mongoose')
 const express = require('express')
-const cors = require('cors')
-const bodyParser = require('body-parser')
 const articleRouter = require('./routes/articleRoute')
+const bodyParser = require('body-parser')
+const cors = require('cors')
 const app = express()
-const port = 8000
-
+const port = process.env.PORT || 5001
+const multer = require('multer')
+const path = require('path')
+const upload = multer({dest: 'uploads/'})
+require('dotenv').config
 app.use(cors())
-app.use(bodyParser.json())
+
+app.use(express.urlencoded({extended:false}))
+app.use(express.json())
+
 
 mongoose.connect('mongodb://localhost:27017/News',{
     useNewUrlParser: true,
     useUnifiedTopology:true
-})
-        
-        .then(() =>{
+})        .then(() =>{
             console.log('database connected')
     })
           .catch(err => console.log(err))
 
+app.use('/', articleRouter)
  
-app.use('/api/articles', articleRouter)
 
 // //Import Routes
-// // const postsRouter = require('./routes/post')
-//  //const userRouter = require('./routes/user')
 
+app.set('views','./views')
+app.set('view engine', 'ejs');
 
+app.use(express.static('public'));
+app.use( express.static('uploads'))
 // //Routes
+ app.use('/', articleRouter)
+ 
+ app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname + '/index.html'))
+    app.use(express.static(path.join(__dirname, '/css')));
+    app.use('/assets',express.static('assets'));
+    app.use(express.static('js'));
+})
+
+app.get('/services', function(req, res) {
+    res.sendFile(path.join(__dirname + '/services.html'))
+    app.use(express.static(path.join(__dirname, '/css')));
+    app.use('/assets',express.static('assets'));
+    app.use(express.static('js'));
+})
+app.get('/offices', function(req, res) {
+    res.sendFile(path.join(__dirname + '/offices.html'))
+    app.use(express.static(path.join(__dirname, '/css')));
+    app.use('/assets',express.static('assets'));
+    app.use(express.static('js'));
+})
+ app.get('/careers', function(req, res) {
+     res.sendFile(path.join(__dirname + '/careers.html'))
+     app.use(express.static(path.join(__dirname, '/css')));
+     app.use('/assets',express.static('assets'));
+     app.use(express.static('js'));
+ })
+ app.get('/academy', function(req, res) {
+     res.sendFile(path.join(__dirname+ '/academy.html'))
+     app.use(express.static(path.join(__dirname, '/css')));
+     app.use('/assets',express.static('assets'));
+     app.use(express.static('js'));
+ })
+ app.get('/security-gaurd', function(req, res) {
+     res.sendFile(path.join(__dirname+ '/security-gaurd.html'))
+     app.use(express.static(path.join(__dirname, '/css')));
+     app.use('/assets',express.static('assets'));
+     app.use(express.static('js'));
+ })
+
+ app.get('/electronic', function(req, res) {
+    res.sendFile(path.join(__dirname + '/electronic-security.html'))
+    app.use(express.static(path.join(__dirname, '/css')));
+    app.use('/assets',express.static('assets'));
+    app.use(express.static('js'));
+})
+app.get('/patrols', function(req, res) {
+    res.sendFile(path.join(__dirname + '/patrols.html'))
+    app.use(express.static(path.join(__dirname, '/css')));
+    app.use('/assets',express.static('assets'));
+    app.use(express.static('js'));
+})
+app.get('/intergrated', function(req, res) {
+    res.sendFile(path.join(__dirname + '/intergrated.html'))
+    app.use(express.static(path.join(__dirname, '/css')));
+    app.use('/assets',express.static('assets'));
+    app.use(express.static('/js'));
+})
+//app.use('/',articleRouter) 
 // const path = require('path')
-// app.use(express.static('js'));
-// app.get('/home', function(req, res) {
-//     app.use(express.static(path.join(__dirname, '/css')));
-//     app.use('/assets',express.static('assets'));
-//     res.sendFile(path.join(__dirname + '/index.html'))
-//     app.use(express.static('/js'));
-// })
-// app.get('/careers', function(req, res) {
-//     res.sendFile(path.join(__dirname + '/careers.html'))
-//     app.use(express.static(path.join(__dirname, '/css')));
-//     app.use('/assets',express.static('assets'));
-//     app.use(express.static('/js'));
-// })
-// app.get('/services/elecronicsecurity', function(req, res) {
-//     res.sendFile(path.join(__dirname+ '/elecronic.html'))
-//     app.use(express.static(path.join(__dirname, '/css')));
-//     app.use('/assets',express.static('assets'));
-//     app.use(express.static('/js'));
-// })
-// app.get('/services/intergratedservices', function(req, res) {
-//     res.sendFile(path.join(__dirname+ '/intergrated.html'))
-//     app.use(express.static(path.join(__dirname, '/css')));
-//     app.use('/assets',express.static('assets'));
-//     app.use(express.static('/js'));
-// })
-// app.get('/News', function(req, res) {
-//     res.sendFile(path.join(__dirname+ '/newsletter.html'))
-//     app.use(express.static(path.join(__dirname, '/css')));
-//     app.use('/assets',express.static('assets'));
-//     app.use(express.static('/js'));
-// })
+//      app.get('/', function(req, res) {
+//      res.sendFile(path.join(__dirname + '/newsletter.html'))
+//      app.use(express.static(path.join(__dirname, '/main.css')));
+//      app.use('/assets',express.static('assets'));
+//      app.use(express.static('/js'));
+       
+//  })
+//  app.get('/News', function(req, res){
+
+//  })
 // app.get('/offices', function(req, res) {
 //     res.sendFile(path.join(__dirname+ '/offices.html'))
 //     app.use(express.static(path.join(__dirname, '/css')));
@@ -72,12 +116,12 @@ app.use('/api/articles', articleRouter)
 //     app.use('/assets',express.static('assets'));
 //     app.use(express.static('/js'));})
 
-// app.get('/News/createpost', function(req, res) {
-//     res.sendFile(path.join(__dirname+ '/newsposts.html'))
-//     app.use(express.static(path.join(__dirname, '/css')));
-//     app.use('/assets',express.static('assets'));
-//     app.use(express.static('/js'));
-// })
+//  app.get('/News/createpost', function(req, res) {
+//      res.sendFile(path.join(__dirname+ '/newsposts.html'))
+//      app.use(express.static(path.join(__dirname, '/css')));
+//      app.use('/assets',express.static('assets'));
+//      app.use(express.static('/js'));
+//  })
 // app.get('/services', function(req, res) {
 //     res.sendFile(path.join(__dirname+ '/services.html'))
 //     app.use(express.static(path.join(__dirname, '/css')));
