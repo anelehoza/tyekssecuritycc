@@ -1,16 +1,16 @@
 const mongoose = require('mongoose')
 const express = require('express')
-const articleRouter = require('./routes/articleRoute')
+const articleRouter = require('./dist/routes/articleRoute')
 //const bodyParser = require('body-parser')
 //const cors = require('cors')
 const app = express()
-const port = process.env.NODE_ENV || 5001
+const port = process.env.PORT || 5001
 const multer = require('multer')
 const path = require('path')
 const upload = multer({dest: 'uploads/'})
 
 
-require('dotenv').config
+require('dotenv').config()
 //app.use(cors())
 
  app.use(express.urlencoded({extended:false}))
@@ -30,74 +30,74 @@ require('dotenv').config
 
 // // //Import Routes
 
- app.set('views','./views')
+ app.set('views','./dist/views')
  app.set('view engine', 'ejs');
 
- app.use(express.static('public'));
- app.use( express.static('uploads'))
+ app.use(express.static('./dist/public'));
+ app.use( express.static('./uploads'))
 
  //Routes
   app.use('/', articleRouter)
  
   app.get('/', function(req, res) {
-     res.sendFile(path.join(__dirname + '/index.html'))
-     app.use(express.static(path.join(__dirname, '/css')));
-     app.use('/assets',express.static('assets'));
-     app.use(express.static('js'));
+     res.sendFile(path.join(__dirname + '/dist/index.html'))
+     app.use(express.static(path.join(__dirname, '/dist/public/css')));
+     app.use('/static',express.static('./dist/assets'));
+     app.use(express.static('/dist/public/js'));
  })
 
  app.get('/services', function(req, res) {
-     res.sendFile(path.join(__dirname + '/services.html'))
+     res.sendFile(path.join(__dirname + '/dist/services.html'))
      app.use(express.static(path.join(__dirname, '/css')));
      app.use('/assets',express.static('assets'));
      app.use(express.static('js'));
  })
  app.get('/offices', function(req, res) {
-     res.sendFile(path.join(__dirname + '/offices.html'))
+     res.sendFile(path.join(__dirname + '/dist/offices.html'))
      app.use(express.static(path.join(__dirname, '/css')));
      app.use('/assets',express.static('assets'));
      app.use(express.static('js'));
  })
   app.get('/careers', function(req, res) {
-      res.sendFile(path.join(__dirname + '/careers.html'))
+      res.sendFile(path.join(__dirname + '/dist/careers.html'))
       app.use(express.static(path.join(__dirname, '/css')));
       app.use('/assets',express.static('assets'));
       app.use(express.static('js'));
   })
   app.get('/academy', function(req, res) {
-      res.sendFile(path.join(__dirname+ '/academy.html'))
+      res.sendFile(path.join(__dirname+ '/dist/academy.html'))
       app.use(express.static(path.join(__dirname, '/css')));
       app.use('/assets',express.static('assets'));
       app.use(express.static('js'));
   })
   app.get('/security-gaurd', function(req, res) {
-      res.sendFile(path.join(__dirname+ '/security-gaurd.html'))
+      res.sendFile(path.join(__dirname+ '/dist/security-gaurd.html'))
       app.use(express.static(path.join(__dirname, '/css')));
       app.use('/assets',express.static('assets'));
       app.use(express.static('js'));
   })
 
   app.get('/electronic', function(req, res) {
-     res.sendFile(path.join(__dirname + '/electronic-security.html'))
+     res.sendFile(path.join(__dirname + '/dist/electronic-security.html'))
      app.use(express.static(path.join(__dirname, '/css')));
      app.use('/assets',express.static('assets'));
      app.use(express.static('js'));
  })
  app.get('/patrols', function(req, res) {
-     res.sendFile(path.join(__dirname + '/patrols.html'))
+     res.sendFile(path.join(__dirname + '/dist/patrols.html'))
      app.use(express.static(path.join(__dirname, '/css')));
      app.use('/assets',express.static('assets'));
      app.use(express.static('js'));
  })
  app.get('/intergrated', function(req, res) {
-     res.sendFile(path.join(__dirname + '/intergrated.html'))
+     res.sendFile(path.join(__dirname + '/dist/intergrated.html'))
      app.use(express.static(path.join(__dirname, '/css')));
      app.use('/assets',express.static('assets'));
      app.use(express.static('/js'));
 })
 
   app.get('/offices', function(req, res) {
-     res.sendFile(path.join(__dirname+ '/offices.html'))
+     res.sendFile(path.join(__dirname+ '/dist/offices.html'))
      app.use(express.static(path.join(__dirname, '/css')));
      app.use('/assets',express.static('assets'));
      app.use(express.static('/js'));
