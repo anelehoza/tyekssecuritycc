@@ -4,7 +4,7 @@ const articleRouter = require('./dist/routes/articleRoute')
 //const bodyParser = require('body-parser')
 //const cors = require('cors')
 const app = express()
-const port = process.env.PORT || 5001
+const port = process.env.NODE_ENV || 5001
 const multer = require('multer')
 const path = require('path')
 const upload = multer({dest: 'uploads/'})
@@ -41,7 +41,7 @@ require('dotenv').config()
  
   app.get('/', function(req, res) {
      res.sendFile(path.join(__dirname + '/dist/index.html'))
-     app.use(express.static(path.join(__dirname, '/dist/public/css')));
+     app.use(express.static(path.join(__dirname, '/dist/public')));
      app.use('/static',express.static('./dist/assets'));
      app.use(express.static('/dist/public/js'));
  })
