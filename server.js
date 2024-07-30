@@ -30,20 +30,20 @@ require('dotenv').config()
 
 // // //Import Routes
 
- app.set('views','./dist/views')
+ app.set('views','./views')
  app.set('view engine', 'ejs');
 
- app.use(express.static('./dist/public'));
- app.use( express.static('./uploads'))
+ app.use(express.static('public'));
+ app.use( express.static('uploads'))
 
  //Routes
   app.use('/', articleRouter)
  
   app.get('/', function(req, res) {
      res.sendFile(path.join(__dirname + '/dist/index.html'))
-     app.use(express.static(path.join(__dirname, '/dist/public')));
-     app.use('/static',express.static('./dist/assets'));
-     app.use(express.static('/dist/public/js'));
+     app.use(express.static(path.join(__dirname, 'public','css')));
+     app.use('/static',express.static('/assets'));
+     app.use(express.static('public'));
  })
 
  app.get('/services', function(req, res) {
