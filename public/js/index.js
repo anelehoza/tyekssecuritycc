@@ -131,13 +131,22 @@ var slides = document.getElementsByClassName("mySlides")
  //New Page Section
 
  // Create Post to server
- function myArticle(e) {
+//  function myArticle(e) {
+//   e.preventDefualt()
+//   var title = document.getElementById('title').value
+//   var author = document.getElementById('author').value
+//   var content = document.getElementById('content').value
+//   var category = document.getElementById('category').value
+//  }
+
+ function newsUser(e) {
   e.preventDefualt()
-  var title = document.getElementById('title').value
-  var author = document.getElementById('author').value
-  var content = document.getElementById('content').value
-  var category = document.getElementById('category').value
- }
+  var username = document.getElementById('username').value
+  var password = document.getElementById('password').value
+  var email = document.getElementById('email').value
+
+}
+
 
 //Deleting Article
 
