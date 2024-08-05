@@ -79,25 +79,17 @@
     </section>
      <!--Newsletter content-->
      <section>
-        <div class="lg-heading">Create post or event</div>
+        <div class="lg-heading">Create User</div>
            
-                   
-                <form action="/createPost" method="post" id="myform" enctype="multipart/form-data" onsubmit="return myArticle()">
+                <form action="/createUser" method="post" id="user-form" onsubmit="return newsUser()">
+                    <label for="title">Username</label>
+                    <input type="text" name="username" id="username">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email">
                     
-                    <label for="title">Title</label>
-                    <input type="text" name="title" id="title">
-                    <label for="author">Author</label>
-                    <input type="text" name="author" id="author">
-                    <label for="content"content>Content</label>
-                    <textarea name="content" id="content" cols="10" rows="10"></textarea>
-                    <label for="category">Category</label>
-                    <input type="text" name="category"  id="category">
-                    <input type="file" name="image" accept="image/*" id="">
-                    <div>
-                    <button type="submit" onclick="myArticle()" id="post-form-btn">Create Post</button>
-
-                    
-                    
+                    <button type="submit" onclick="newsUser()" id="user-form-btn">Create user</button>
                   </form>
                   
      </section>

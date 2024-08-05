@@ -138,7 +138,7 @@ body{
     padding: 0 1rem;
     position: relative;
     overflow: hidden !important;
-    background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8) ), url('./assets/home.jpg');
+    background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8) ), url('../assets/home.jpg');
     object-fit: cover;
     background-size: cover;
     background-position: center;
@@ -169,7 +169,7 @@ body{
     left: 0;
     height: 11rem;
     width: 100%;
-    background: url('./assets/wave.png');
+    background: url('../assets/wave.png');
     background-size: 100rem 11rem;
     animation: waves 8s linear infinite;
     background-repeat: repeat-x;
@@ -204,7 +204,7 @@ body{
     position: absolute;
     top: 200px;
     bottom: 0;
-    background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('./assets/reception.jpg');
+    background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('../assets/reception.jpg');
     background-position: cover;
     background-size: cover;
     object-position: cover;
@@ -317,7 +317,7 @@ padding: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background:linear-gradient(rgba(0, 0, 0, .7),rgba(0, 0, 0, 0.7)),url('./assets/team.jpg') ;
+    background:linear-gradient(rgba(0, 0, 0, .7),rgba(0, 0, 0, 0.7)),url('../assets/team.jpg') ;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment:fixed;
@@ -373,7 +373,7 @@ padding: 30px;
     min-height: 63vh;
     display: flex;
     flex-direction: column;
-    background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('./assets/intrated-bg.jpeg');
+    background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('../assets/intrated-bg.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     color:white;
@@ -439,7 +439,7 @@ padding: 30px;
 
 /*Onsite service*/
 .onsite{
-    background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('./assets/security-guard2.jpg');
+    background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('../assets/security-guard2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -453,7 +453,7 @@ padding: 30px;
     flex-direction: column;
     align-items: center;
     min-height: 63vh;
-    background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('./assets/office.jpg');
+    background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('../assets/office.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -543,7 +543,7 @@ padding: 30px;
 /*Eectronic service*/
 
 .elec-cam{
-    background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('./assets/electronic-cam2.png');
+    background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('../assets/electronic-cam2.png');
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -559,7 +559,7 @@ padding: 30px;
     flex-direction: column;
     min-height: 65vh;
     width: 100%;
-    background:linear-gradient( rgba(0, 0, 0.8, 0.5), rgba(0, 0, 0, 0.9) ), url('./assets/security-installation.webp');
+    background:linear-gradient( rgba(0, 0, 0.8, 0.5), rgba(0, 0, 0, 0.9) ), url('../assets/security-installation.webp');
     background-attachment: fixed;
     background-size:cover;
     background-repeat: no-repeat;
@@ -611,7 +611,7 @@ padding: 30px;
   .cctv-installation{
     height: 1100px;
     width: 100%;
-    background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('./assets/cctv-camera-installation-services.jpg');
+    background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('../assets/cctv-camera-installation-services.jpg');
     background-attachment: fixed;
     background-size:cover;
     background-repeat: no-repeat;
@@ -703,7 +703,7 @@ padding: 30px;
 .alarm-system{
     height: 100vh;
     width: 100%;
-    background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('./assets/security-installation.webp');
+    background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('../assets/security-installation.webp');
     background-size:cover;
     background-repeat: no-repeat;
     background-color: #111 ;
@@ -731,7 +731,7 @@ padding: 30px;
 
   /*Patrol */
   .patrol{
-    background-image:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("./assets/patrol-2.jpg");
+    background-image:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("../assets/patrol-2.jpg");
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -744,7 +744,7 @@ padding: 30px;
     flex-direction: column;
     min-height: 63vh;
     width: 100%;
-    background:linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),url('./assets/control-1.jpg');
+    background:linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),url('../assets/control-1.jpg');
     background-size:cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -815,7 +815,7 @@ padding: 30px;
 .monitoring-section{
     height: auto;
     width: 100%;
-    background:linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('./assets/control-room.jpg');
+    background:linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/control-room.jpg');
     background-size:cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -848,7 +848,7 @@ padding: 30px;
 /*Integrated section*/
 
 .intergrated{
-    background:linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('./assets/intergrated.jfif');
+    background:linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('../assets/intergrated.jfif');
     background-size:cover;
     background-repeat: no-repeat;
     background-color: #111 ;
@@ -861,7 +861,7 @@ padding: 30px;
     display: flex;
     flex-direction: column;
     min-height: 70vh;
-    background:linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, .7) ), url('./assets/intergrated.jfif');
+    background:linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, .7) ), url('../assets/intergrated.jfif');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -1073,7 +1073,7 @@ padding: 30px;
     flex-direction: column;
     min-height: 75vh;
     width: 100%;
-    background:linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, .7) ), url('./assets/map2.webp');
+    background:linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, .7) ), url('../assets/map2.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -1097,7 +1097,7 @@ padding: 30px;
     flex-direction: column;
     min-height: 75vh;
     min-width: 100%;
-    background:linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, .7) ), url('./assets/job-vacancy.jpg ');
+    background:linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, .7) ), url('../assets/job-vacancy.jpg ');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -1152,7 +1152,7 @@ padding: 30px;
     display: flex;
     flex-direction: column;
     min-height: 70vh;
-    background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, .5) ), url('./assets/academy-1.jpg');
+    background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, .5) ), url('../assets/academy-1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -1184,14 +1184,14 @@ padding: 30px;
 }
 
 .firearm{
-    background: url('./assets/firearms.jfif');
+    background: url('../assets/firearms.jfif');
     background-size: cover;
     background-position: center;
     object-fit: cover;
 }
 
 .role-of-gaurd{
-    background: url('./assets/security-gaurd-2.jpg');
+    background: url('../assets/security-gaurd-2.jpg');
     background-size: cover;
     object-fit: cover;
 }
@@ -1201,26 +1201,26 @@ padding: 30px;
 }
 
 .power-of-arrest{
-    background: url('./assets/handcuffs.jpg');
+    background: url('../assets/handcuffs.jpg');
     background-size: cover;
     background-position: center;
     object-fit: cover;
 }
 .use-of-force{
-    background: url('./assets/gaurds-3.JPG');
+    background: url('../assets/gaurds-3.JPG');
     background-size: cover;
     object-fit: cover;
 }
 
 .first-aid{
-    background: url('./assets/first-aid.jfif');
+    background: url('../assets/first-aid.jfif');
     background-size: cover;
     background-position: center;
     object-fit: cover;
 }
 
 .crowd-control {
-    background: url('./assets/riot-squard.jpg');
+    background: url('../assets/riot-squard.jpg');
     background-size: cover;
     background-position: center;
     object-fit: cover;
@@ -1267,7 +1267,7 @@ padding: 30px;
 .clients-item1{ 
     height: 100%;
     width: 400px; ;
-    background: url('./assets/health.jpg');
+    background: url('../assets/health.jpg');
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -1275,28 +1275,28 @@ padding: 30px;
 .clients-item2{
     height: 100%;
     width:400px ;
-    background:url('./assets/doj.png') ;
+    background:url('../assets/doj.png') ;
     background-repeat: no-repeat;
     background-size: contain;
 }
 .clients-item3{
     height: 100%;
     width:400px;
-    background: url('./assets/dheat.png');
+    background: url('../assets/dheat.png');
     background-repeat: no-repeat;
     background-size: contain;
 }
 .clients-item4{
     height: 100%;
     width:400px ;
-    background: url('./assets/armscor.jpg');
+    background: url('../assets/armscor.jpg');
     background-repeat: no-repeat;
     background-size: contain;
 }
 .clients-item .clients-item5{
     height: 100%;
     width: 400px ;
-    background: url('./assets/SPAR-logo.jpg');
+    background: url('../assets/SPAR-logo.jpg');
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -1304,7 +1304,7 @@ padding: 30px;
  .clients-item6{
     height: 100%;
     width:400px;
-    background: url('./assets/bt-ngebs.jpg');
+    background: url('../assets/bt-ngebs.jpg');
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -1345,35 +1345,35 @@ padding: 30px;
 .partners-item1{
     height: 100%;
     width:400px;
-    background: url('./assets/saps.png');
+    background: url('../assets/saps.png');
     background-repeat: no-repeat;
     background-size: contain;
 }
 .partners-item2{
     height: 100%;
     width:400px;
-    background: url('./assets/psira.jpg');
+    background: url('../assets/psira.jpg');
     background-repeat: no-repeat;
     background-size: contain;
 }
 .partners-item3{
     height: 100%;
     width:400px;
-    background: url('./assets/sasseta.png');
+    background: url('../assets/sasseta.png');
     background-repeat: no-repeat;
     background-size: contain;
 }
 .partners-item4{
     height: 100%;
     width:400px;
-    background: url('./assets/qcto.jpg');
+    background: url('../assets/qcto.jpg');
     background-repeat: no-repeat;
     background-size: contain;
 }
 .partners-item5{
     height: 100%;
     width:400px;
-    background: url('./assets/NRCS.jpg');
+    background: url('../assets/NRCS.jpg');
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -1423,6 +1423,12 @@ padding: 30px;
     border-radius: 25px; 
     padding-bottom: 40px;
     margin: 5px 15px;
+}
+
+.user-login i {
+    color:#bbb;
+    font-size: 28px;
+    padding-top: 10px;
 }
 
 #article-title{

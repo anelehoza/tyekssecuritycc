@@ -1,20 +1,27 @@
 const mongoose = require('mongoose')
 const express = require('express')
 const articleRouter = require('./dist/routes/articleRoute')
-//const bodyParser = require('body-parser')
+const userRouter = require('./dist/routes/userRoute')
+const dotenv = require('dotenv')
+
+require('dotenv').config();
 //const cors = require('cors')
+const bodyParser = require('body-parser')
 const app = express()
-const port = process.env.NODE_ENV || 5001
+const port = process.env.PORT || 5001
 const multer = require('multer')
 const path = require('path')
 const upload = multer({dest: 'uploads/'})
 
-
-require('dotenv').config()
-//app.use(cors())
-
+//const corsOption = {
+//    origin: ['http://localhost:5001'],
+//}
+//app.use(cors(corsOption))
+//
  app.use(express.urlencoded({extended:false}))
- app.use(express.json())
+ app.use(bodyParser.urlencoded({extended:true}))
+ app.use(bodyParser.json())
+ app.use(bodyParser())
 
 
  mongoose.connect('mongodb://localhost:27017/News',{
@@ -26,24 +33,26 @@ require('dotenv').config()
            .catch(err => console.log(err))
 
  app.use('/', articleRouter)
+ app.use('/', userRouter)
  
 
 // // //Import Routes
 
- app.set('views','./views')
+ app.set('views','./dist/views')
  app.set('view engine', 'ejs');
 
- app.use(express.static('public'));
+ app.use(express.static('./dist/public'));
  app.use( express.static('uploads'))
+ 
 
  //Routes
-  app.use('/', articleRouter)
+
  
   app.get('/', function(req, res) {
      res.sendFile(path.join(__dirname + '/dist/index.html'))
-     app.use(express.static(path.join(__dirname, 'public','css')));
-     app.use('/static',express.static('/assets'));
-     app.use(express.static('public'));
+     app.use(express.static(path.join(__dirname,'/css')));
+     app.use('/assets',express.static('assets'));
+     app.use(express.static('js'));
  })
 
  app.get('/services', function(req, res) {
@@ -104,7 +113,7 @@ require('dotenv').config()
  })
  
  app.listen(port, (req, res) => {
-    console.log(`Server running on port ${port}`)
+    console.log(`Server running ${process.env.NODE_ENV} mode on port ${port}`)
 })
 
 

@@ -70,37 +70,29 @@
                         <div class="btn-line"><h1></h1></div>
                         <div class="btn-line"><h1></h1></div>
                     </div>
-                    
                     <div class="close" id="menu-close"></div>
             </div>
         </div>
-        
-        
     </section>
-     <!--Newsletter content-->
-     <section>
-        <div class="lg-heading">Create post or event</div>
-           
-                   
-                <form action="/createPost" method="post" id="myform" enctype="multipart/form-data" onsubmit="return myArticle()">
-                    
-                    <label for="title">Title</label>
-                    <input type="text" name="title" id="title">
-                    <label for="author">Author</label>
-                    <input type="text" name="author" id="author">
-                    <label for="content"content>Content</label>
-                    <textarea name="content" id="content" cols="10" rows="10"></textarea>
-                    <label for="category">Category</label>
-                    <input type="text" name="category"  id="category">
-                    <input type="file" name="image" accept="image/*" id="">
-                    <div>
-                    <button type="submit" onclick="myArticle()" id="post-form-btn">Create Post</button>
 
-                    
-                    
-                  </form>
-                  
+     <!--Newsletter content-->
+     <section class="news">
+        <div class="lg-heading">Login</div>
+     <section>
+            
+        <form action="/userLogin" method="post" id="loginform" onsubmit="return userLogin()">
+            <label for="title">Username</label>
+            <input type="text" name="username" id="username">
+            <label for="author">Password</label>
+            <input type="text" name="password" id="password">
+    
+            <button type="submit" onclick="userLogin()" id="login-form-btn">Login</button>
+            <a href="/createUser">Register here</a>
+          </form>
+          
+
      </section>
+</section>
      <!--Footer Section-->
      <section>
 
@@ -163,7 +155,7 @@
         
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-md-12 copyright" style="color: #fff; font-size: .9rem;">
+                    <div class="col-md-12 copyright" style="color: #fff; font-size: 1.3rem;">
                          Copyright &copy; Tyeks Security Services. 2023 - All Rights Reserved | Designed by Anele Hoza.
                     </div>
                 </div>

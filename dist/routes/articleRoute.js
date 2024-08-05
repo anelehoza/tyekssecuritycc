@@ -95,22 +95,22 @@ router.get('/news', async (req, res) => {
 //  })
 
 //  //Delete article
-//  router.delete('/:id', async (req, res) =>{
-//     try {
-//         const article = await Article.findByIdAndDelete(
-//             req.params.id)
-//         if (!article) {
-//             return res.status(404).json({
-//                 message: 'Article not found'
-//             })
-//         }
-//         res.json({ message: 'Article Deleted Successfully '})
-//     } catch (err) {
-//         res.status(500).json({
-//             message : err.message
-//         })
-//     }
-// })
+  router.delete('/news:id', async (req, res) =>{
+     try {
+         const article = await Article.findByIdAndDelete(
+             req.params.id)
+         if (!article) {
+             return res.status(404).json({
+                 message: 'Article not found'
+             })
+         }
+         res.json({ message: 'Article Deleted Successfully '})
+     } catch (err) {
+         res.status(500).json({
+             message : err.message
+         })
+     }
+ })
 
 
 module.exports = router
