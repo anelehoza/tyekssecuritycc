@@ -1,37 +1,44 @@
-const mongoose = require("mongoose");
+
 const express = require("express");
-const articleRouter = require("./dist/routes/articleRoute");
-const jobRouter = require("./dist/routes/jobRoute");
-const MONGOBB_URL = process.env.MONGOBB_URI
-const dotenv = require("dotenv");
-require("dotenv").config();
+const app = express();
+const port = 3000;
+
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const app = express();
-const port = process.env.PORT || 5001;
+
+//const articleRouter = require("./dist/routes/articleRoute");
+//const jobRouter = require("./dist/routes/jobRoute");
+const emailRouter = require("./dist/routes/emailRoute");
+
+const dotenv = require("dotenv");
+require("dotenv").config();
+
+
 const multer = require("multer");
 const path = require("path");
 const upload = multer({ dest: "uploads/" });
 
-const corsOption = {
-  origin: "http://localhost:5001",
-};
-app.use(cors(corsOption));
+// const corsOption = {
+//    origin: "http://localhost:5001",
+// };
+// app.use(cors(corsOption));
 
 app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.json());
 
-mongoose
-  .connect("mongodb://localhost:27017/News")
-  .then(() => {
-    console.log("database connected");
-  })
-  .catch((err) => console.log(err));
 
-app.use("/", articleRouter);
-app.use("/", jobRouter);
+// mongoose
+//   .connect(
+//     'mongodb://localhost:27017/News',
+//     { useNewUrlParser: true }
+//   )
+//   .then(() => console.log('MongoDB Connected'))
+//   .catch(err => console.log(err));
+
+//app.use("/", articleRouter);
+//app.use("/", jobRouter);
 
 // // //Import Routes
 
@@ -104,6 +111,6 @@ app.get("/offices", function (req, res) {
   app.use(express.static("/js"));
 });
 
-app.listen(port, (req, res) => {
-  console.log(`Server running ${process.env.NODE_ENV} mode on port ${port}`);
+app.listen(3000, (req, res) => {
+  console.log(`Server running on..`);
 });

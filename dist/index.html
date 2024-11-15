@@ -203,7 +203,7 @@
               <img src="./assets/home2.jpg" alt="building image" width="100%" onclick="openModal(), currentSlide(1)"> 
             </div>
          <div class="gallery-item">
-            <img src="./assets/car3 .jpg" alt="cars infront" width="100%" onclick="openModal(), currentSlide(2)">    
+            <img src="./assets/top-view-vehicles.jpg" alt="cars infront" width="100%" onclick="openModal(), currentSlide(2)">    
         </div>
         <div class="gallery-item">
             <img  src="./assets/vehicles2.jpg" alt="bmw and toyota" width="100%" onclick="openModal(), currentSlide(3)">   
@@ -212,7 +212,7 @@
                 <img src="./assets/van.jpg" alt="photo image" width="100%" onclick="openModal(), currentSlide(4)">    
             </div>
             <div class="gallery-item">
-                <img src="./assets/patrol.jpg" alt="security picture" width="100%" onclick="openModal(), currentSlide(5)">    
+                <img src="./assets/bt-ngebs-guards.jpg" alt="security picture" width="100%" onclick="openModal(), currentSlide(5)">    
         </div>
             <div class="gallery-item">
                 <img src="./assets/IMG_3286.jpg" alt="control room image" width="100%" onclick="openModal(), currentSlide(6)">    
@@ -227,7 +227,7 @@
                 <img src="./assets/car2.jpg" alt="security with dog" width="100%" onclick="openModal(), currentSlide(9)">
             </div>
             <div class="gallery-item">
-                <img  src="./assets/parade2.jpg" alt="parade-image" width="100%" onclick="openModal(), currentSlide(10)">   
+                <img  src="./assets/bt-ngebs-guards-2.jpg" alt="parade-image" width="100%" onclick="openModal(), currentSlide(10)">   
             </div>
    </div>
     <div class="modal" id="myModal">
@@ -238,7 +238,7 @@
             </div>
 
                 <div class="mySlides">
-                    <img src="./assets/car3 .jpg" alt="cars infront" style="width: 100%">    
+                    <img src="./assets/top-view-vehicles.jpg" alt="cars infront" style="width: 100%">    
                 </div>
                 
             <div class=" mySlides">
@@ -250,7 +250,7 @@
                 </div>
 
                 <div class="mySlides">
-                    <img src="./assets/patrol.jpg" alt="security picture" style="width: 100%">    
+                    <img src="./assets/bt-ngebs-guards.jpg" alt="security picture" style="width: 100%">    
             </div>
 
                 <div class="mySlides">
@@ -270,7 +270,7 @@
                 </div>
 
                 <div class="mySlides">
-                    <img src="./assets/parade2.jpg" alt="parade-image" style="width: 100%">   
+                    <img src="./assets/bt-ngebs-guards-2.jpg" alt="parade-image" style="width: 100%">   
                 </div>   
        </div>
        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -292,6 +292,17 @@
                 <strong>Phone:</strong> 087 943 9192<br>
                 <strong>Email:</strong> info@tyekssecurity.co.za<br>
                 </p>
+            </div>
+            <div class="contact-form">
+                <form action="send" method="POST" >
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" name="phone" id="">
+                    <input type="email" name="email" id="">
+                    <textarea name="message" id="" rows="6"></textarea>
+                    <button type="submit">SUBMIT</button>
+                </form>
             </div>
             <div class="more-offices-button">
                 <a href="/offices">for more offices click here</a>
@@ -403,8 +414,9 @@
             <div class="col-lg-3 col-md-6 footer-newsletter">
                 <h4>Subscription</h4>
                 <p>With Our Good Service Put Together, You Get An Ensemble Capable Of Doing Anything And Everything Your business Needs. Subscribe Here To Get Our Latest Updates.</p>
-                <form action="" method="post">
-                    <input type="email" name="email"><input type="submit"  value="Subscribe">
+                <form action="send" method="POST">
+                    <input type="email" name="email">
+                    <input type="submit"  value="Subscribe">
                 </form>
             </div>
         </div>
