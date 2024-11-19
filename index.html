@@ -288,14 +288,29 @@
                 <h2>Contact Us</h2>
             </div>
             <div class="contact-details">
-                <p>95 Nelson Mandela Drive<br> Mthatha 5100<br>
-                <strong>Phone:</strong> 087 943 9192<br>
-                <strong>Email:</strong> info@tyekssecurity.co.za<br>
-                </p>
+                <div class="contact-details-text">
+                    <p>95 Nelson Mandela Drive<br> Mthatha 5100<br>
+                    <strong>Phone:</strong> 087 943 9192<br>
+                    <strong>Email:</strong> info@tyekssecurity.co.za<br>
+                    </p>
+                </div>
+                
+                <div class="contact-form">
+                    <form action="/send" method="POST" >
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="">
+                        <label for="phone">Phone Number</label>
+                        <input type="text" name="phone" id="">
+                        <label for="email">Email Address</label>
+                        <input type="email" name="email" id="">
+                        <textarea name="message" id="" rows="6" placeholder="Enter your message.."></textarea>
+                        <button type="submit">SUBMIT</button>
+                    </form>
+                </div>
             </div>
-            <div class="more-offices-button">
-                <a href="/offices">for more offices click here</a>
-            </div>
+        </div>
+        <div class="more-offices-button">
+            <a href="/offices">for more offices click here</a>
         </div>
     </div>
 </section>
@@ -403,8 +418,9 @@
             <div class="col-lg-3 col-md-6 footer-newsletter">
                 <h4>Subscription</h4>
                 <p>With Our Good Service Put Together, You Get An Ensemble Capable Of Doing Anything And Everything Your business Needs. Subscribe Here To Get Our Latest Updates.</p>
-                <form action="" method="post">
-                    <input type="email" name="email"><input type="submit"  value="Subscribe">
+                <form action="send" method="POST">
+                    <input type="email" name="email">
+                    <input type="submit"  value="Subscribe">
                 </form>
             </div>
         </div>

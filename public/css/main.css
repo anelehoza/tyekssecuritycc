@@ -1101,8 +1101,6 @@ padding: 30px;
     margin: 20px 0;
     height: auto;
     width: 100%;
-    display: flex;
-    flex-direction: column;
     background: linear-gradient(0deg, rgb(13, 140, 89) 0%, rgba(216,237,62,0.9668242296918768) 100%);
 
 }
@@ -1111,13 +1109,15 @@ padding: 30px;
     padding: 15px 0;
     margin: 5px 0;
 }
+
 .contact-details {
-    
-    padding: 10px 0;
-    margin: 20px 0;
+    display: flex;
+    width: 1120px;
+    height: 100%;
+    margin: 25px 40%;
 
 }
-.contact-details p {
+.contact-details-text p {
     display: inline;
     color: #fff;
 }
@@ -1195,7 +1195,35 @@ padding: 30px;
     color: white;
     font-size: 18px;
 }
-
+.contact-form{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:20px;
+  }
+.contact-form form label{
+    display:block;
+  }
+  .contact-form form button, .contact-form form input, .contact-form form textarea{
+    width:70%;
+    padding:1.4em;
+    margin: 5px;
+    border:1px solid #c9e6ff;
+  }
+  .contact-form form button{
+    background:#c9e6ff;
+    border:0;
+    text-transform: uppercase;
+  }
+  
+  .contact-form form button:hover,.contact-form form button:focus{
+    background:#92bde7;
+    color:#fff;
+    outline:0;
+    transition: background-color 2s ease-out;
+  }
+  
+  
 
 /*Careers*/
 .careers{
@@ -1785,7 +1813,8 @@ padding: 30px;
 
 .partners-item img{
     width:15%;
-    aspect-ratio: 2/2;
+    aspect-ratio: 3/2;
+    object-fit: contain;
     
 }
 
