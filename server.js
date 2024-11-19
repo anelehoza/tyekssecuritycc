@@ -110,7 +110,12 @@ app.get("/offices", function (req, res) {
   app.use("/assets", express.static("assets"));
   app.use(express.static("/js"));
 });
-
+app.get("/news", function (req, res) {
+ res.render('news')
+});
+app.get("/careers", function (req, res) {
+ res.render('careers')
+});
 app.listen(3000, (req, res) => {
   console.log(`Server running on..`);
 });
