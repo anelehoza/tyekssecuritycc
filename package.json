@@ -6,14 +6,17 @@
     "deploy": "gh-pages -d dist",
     "prod": "set NODE_ENV=PRODUCTION && node server",
     "dev": "set NODE_ENV=DEVELOPMENT && node server",
-    "start": "nodemon server.js"
+    "start": "gulp"
   },
   "author": "Anele hoza",
   "license": "MIT",
   "description": "Responsive website",
   "devDependencies": {
+    "browser-sync": "^3.0.3",
     "gh-pages": "^6.1.1",
     "gulp": "^5.0.0",
+    "gulp-cli": "^3.0.0",
+    "gulp-sass": "^5.1.0",
     "nodemon": "^3.1.4"
   },
   "dependencies": {
