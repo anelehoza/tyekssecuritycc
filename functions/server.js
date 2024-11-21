@@ -9,7 +9,7 @@ const bodyParser = require("body-parser");
 
 //const articleRouter = require("./dist/routes/articleRoute");
 //const jobRouter = require("./dist/routes/jobRoute");
-const emailRouter = require("./dist/routes/emailRoute");
+//const emailRouter = require("./dist/routes/emailRoute");
 
 const dotenv = require("dotenv");
 require("dotenv").config();
