@@ -1,12 +1,12 @@
 {
   "name": "tyekssecurity",
   "version": "1.0.0",
-  "main": "functions/server.js",
+  "main": "index.js",
   "scripts": {
     "deploy": "gh-pages -d dist",
     "prod": "set NODE_ENV=PRODUCTION && node server",
     "dev": "set NODE_ENV=DEVELOPMENT && node server",
-    "start": "nodemon server-local.js",
+    "start": "",
     "build": "netlify deploy --prod"
   },
   "author": "Anele hoza",

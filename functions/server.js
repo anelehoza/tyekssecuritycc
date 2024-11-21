@@ -124,5 +124,4 @@ app.listen(3000, (req, res) => {
 
 app.use('/.netlify/functions/server', router)
 
-module.exports = app
-module.handler = serverless(app)
+module.exports.handler = serverless(app)

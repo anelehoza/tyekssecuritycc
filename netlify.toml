@@ -1,8 +1,6 @@
 # example netlify.toml
 [build]
-  command = "# no build command"
-  functions = "C:\Users\sbuhlungu\app\tyekssecuritycc\functions"
-  publish = "dist"
+  functions = "functions"
 
   ## Uncomment to use this redirect for Single Page Applications like create-react-app.
   ## Not needed for static site generators.
