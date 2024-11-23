@@ -88,4 +88,17 @@ router.get("/offices", function (req, res) {
   app.use(express.static("/js"));
 });
 
+router.get("/offices", function (req, res) {
+  res.sendFile(path.join(__dirname + "/dist/offices.html"));
+  app.use(express.static(path.join(__dirname, "/css")));
+  app.use("/assets", express.static("assets"));
+  app.use(express.static("/js"));
+});
+
+router.get("/news", function (req, res) {
+  res.send('news')
+});
+
+
+
 module.exports.handler = serverless(app)
