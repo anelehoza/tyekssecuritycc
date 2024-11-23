@@ -6,8 +6,8 @@
     "deploy": "gh-pages -d dist",
     "prod": "set NODE_ENV=PRODUCTION && node server",
     "dev": "set NODE_ENV=DEVELOPMENT && node server",
-    "start": "nodemon server.js",
-    "build": "netlify deploy --prod "
+    "start": "gulp",
+    "build": "gulp"
   },
   "author": "Anele hoza",
   "license": "MIT",

@@ -29,3 +29,4 @@ exports.default = series(
     parallel(ejsTask, cssTask , jsTask),
     watchTask
 )
+exports.build = series(cssTask, jsTask)
