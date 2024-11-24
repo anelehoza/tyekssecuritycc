@@ -1,13 +1,13 @@
 {
   "name": "tyekssecurity",
   "version": "1.0.0",
-  "main": "functions/app.js",
+  "main": "server.js",
   "scripts": {
     "deploy": "gh-pages -d dist",
     "prod": "set NODE_ENV=PRODUCTION && node server",
     "dev": "set NODE_ENV=DEVELOPMENT && node server",
     "start": "nodemon server.js",
-    "build": "netlify-lambda build express"
+    "build": "gulp"
   },
   "author": "Anele hoza",
   "license": "MIT",
@@ -20,6 +20,7 @@
     "gulp-cli": "^3.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-ejs": "^5.1.0",
+    "gulp-express": "^0.3.5",
     "gulp-minify-css": "^1.2.4",
     "gulp-nodemon": "^2.5.0",
     "gulp-sass": "^5.1.0",
@@ -27,6 +28,7 @@
     "gulp-uglify": "^3.0.2",
     "gulp-useref": "^5.0.0",
     "gulp-watch": "^5.0.1",
+    "gulp-webserver": "^0.9.1",
     "node-sass": "^9.0.0",
     "nodemon": "^3.1.4",
     "sass": "^1.81.0"
