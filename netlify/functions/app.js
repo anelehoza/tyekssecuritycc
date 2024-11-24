@@ -72,7 +72,7 @@ router.get("/", (req, res) => {
 //  });
 
 app.use('./netify/functions/app', router)
-app.use('', (req, res) => res.sendFile(path.join(__dirname, '../index.html')))
+// app.use('', (req, res) => res.sendFile(path.join(__dirname, '../index.html')))
 
 module.exports = app
-module.exports.handler = serverless(app)
+module.exports.handler = serveless(app)
