@@ -1,3 +1,4 @@
+const express = require('express')
 const {src, dest, series, parallel, watch} = require('gulp')
 const minifyCSS = require('gulp-minify-css')
 const Uglify = require('gulp-uglify')
@@ -25,8 +26,13 @@ function watchTask() {
         parallel(ejsTask, cssTask , jsTask))
 }
 
+function defualtTask() {
+    
+}
+
 exports.default = series(
-    parallel(ejsTask, cssTask , jsTask),
+    parallel(ejsTask, cssTask , jsTask), 
+
     watchTask
 )
 exports.build = series(cssTask, jsTask)
