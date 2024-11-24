@@ -2,4 +2,10 @@
 [build]
   command = "npm i && npm run build"
   functions = "functions"
+  external_node_modulees - ["express"]
+  [[redirects]]
+  force = true
+  from = "/app/*"
+  status = 200
+  to = ".netlify/functions/api/:splat
 
