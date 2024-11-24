@@ -1,6 +1,6 @@
 
 [build]
-  command = "npm i && npm run build"
+  command = "npm i && npm run build && npm start"
   functions = "functions"
   external_node_modules = ["express"]
   node_bundler = "esbuild"
