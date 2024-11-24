@@ -1,7 +1,7 @@
 
 [build]
-  command = "npm i && npm run build && npm start"
-  functions = "functions"
+  command = "npm i && npm run build "
+  functions = "netlify/functions"
   external_node_modules = ["express"]
   node_bundler = "esbuild"
   [[redirects]]
