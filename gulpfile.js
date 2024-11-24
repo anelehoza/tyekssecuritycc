@@ -56,6 +56,6 @@ function watchTask() {
 exports.default = series(
     parallel(ejsTask, cssTask , jsTask, startserver), 
 
-    watchTask
+    // watchTask
 )
 exports.build = series(cssTask, jsTask, startserver)
