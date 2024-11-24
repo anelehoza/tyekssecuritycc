@@ -2,7 +2,7 @@
 [build]
   command = "npm i && npm run build"
   functions = "functions"
-  external_node_modulees - ["express"]
+  external_node_modules = ["express"]
   [[redirects]]
   force = true
   from = "/app/*"
