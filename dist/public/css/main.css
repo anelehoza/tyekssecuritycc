@@ -1994,16 +1994,11 @@ font-size: 17px;
     margin: 0;
 }
 
-.footer .footer-top .footer-links ul i {
-    padding-right: 8px;
-    color: #ffffff;
-    font-size: 16px;
-}
-
 .footer .footer-top .footer-links ul li {
     border-bottom: 1px solid #ffffff;
     padding: 7px 0;
 }
+
 
 .footer .footer-top .footer-links ul li:first-child {
     padding-top: 0;
@@ -2012,10 +2007,11 @@ font-size: 17px;
 .footer .footer-top .footer-links ul a {
     font-size: 14px;
     color: #ffffff;
+    text-decoration: none;
 }
 
 .footer .footer-top .footer-links ul a:hover {
-    color: #00bfff;
+    color: var(--bg-secondary-color);
 }
 
 .footer .footer-top .footer-contact p {
@@ -2065,12 +2061,9 @@ font-size: 17px;
     position: fixed;
     display: none;
     background-color: #00bfff;
-    color: #ffffff;
-    width: 45px;
-    height: 45px;
+    color: #ffff;
     text-align: center;
     line-height: 1;
-    font-size: 44px;
     right: 15px;
     bottom: 15px;
     transition: background 0.3s;
@@ -2078,16 +2071,27 @@ font-size: 17px;
 }
 
 .back-to-top i {
+
     color:#111;
 }
 
 .back-to-top i:hover {
-    color: black;
+    color: #fff;
 }
+
+.back-to-top {
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    border-radius: 50%;
+
+}
+
 /* Media Query */
 @media (max-width: 600px){
 body {
     overflow-x: hidden ;
+    box-sizing: border-box;
 }
 h1{
         font-size: 20px;
@@ -2098,12 +2102,12 @@ h2 {
     line-height: 1;
 }
 p,h3 {
-    font-size: 16px;
+    font-size: 17px;
 }
 
 
 .home {
-    height:100%;
+    height:45%;
 }
 .home .home-title {
     font-size: 3.8rem;
@@ -2278,19 +2282,24 @@ p,h3 {
     display: block;
     height:auto;
     width: 100%;
-    margin: 0;
  }
  
  .contact-wrapper{
      height: auto;
      width: 100%;
-     display: block;
-     padding: 35px 10px;
+     margin-bottom: 45px;
  }
  .contact-details {
+     width: 100%;
+    display: block;
     height: auto;
-    margin: 20px 0;
-    padding: 40px 0;
+    margin: 20px auto;
+    padding: 20px; 
+ }
+ .contact-details-text {
+    margin: 10px;
+ }
+ .contact-details p{
     line-height: 1.2;
  }
  
