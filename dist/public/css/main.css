@@ -278,7 +278,7 @@ p {
 
 .about{
     width: 100%;
-    top: -3rem;
+    top: 1rem;
     text-align: center;
     line-height: 1rem;
 }
@@ -293,8 +293,11 @@ p {
     height: auto;
     display: inline;
     line-height: 1.8;
-    padding: 10px 14px;
+    padding: 10px 18px;
 
+}
+.about-text h1 {
+    margin:25px auto;
 }
 .text p{
     width: 100%;
