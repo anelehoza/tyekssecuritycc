@@ -216,7 +216,6 @@ p {
     background-size: cover;
     background-repeat: no-repeat;
     object-fit: contain;
-
     right: 0;
     height: 350px;
     width:100%;
@@ -428,17 +427,16 @@ p {
     padding: 5px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap:5px;
     
 }
 .services-item{
     display: flex;
-    flex-wrap: nowrap;
     flex-direction: column;
     width: 600px;
     height: 350px;
     padding: 10px;
     margin: 10px;
-    align-items: center;
 }
 .services-item-icon {
     padding: 15px 0;
@@ -453,13 +451,15 @@ p {
     border-radius: 50%;
     padding: 5px;
 }
+.services-item-header h2 {
+    text-align: center;
+
+}
 .services-item-info {
     width: 100%;
-    display: inline;
+    height: auto;
     padding: 10px;
-    margin: 10px;
     line-height: 1.8;
-    font-size: 18px;
 }
 .services-btn-readmore {
     color: #fff;
@@ -505,11 +505,11 @@ p {
 }
 
 .armed-gaurds h1{
-    font-size: 48px;
+    font-size: 38px;
     color:var(--bg-primary-color);
 }
 .armed-gaurds h3{
-    width: 70%;
+    width: 100%;
     font-size: 18px;
     font-family: 600;
     line-height: 1.5;
@@ -534,35 +534,27 @@ p {
     height: 450px;
 }
 
-.armed-gaurds button{
-    width: 180px;
-    height: 50px;
-    color: white;
-    background-color: var(--bg-primary-color);
-    font-size: 2rem;
-    border-radius: 25px;
-    border: none;
-    
-}
-.armed-gaurds li::marker{
+.gaurds-accordion ul li::marker{
     color: var(--bg-primary-color);
     list-style: none;
 }
 
-.security-item {
+.security-item  {
     height: 500px;
     width:100%;
     display: grid;
-    grid-template-columns:60% 40%;
-    gap:40px;
+    grid-template-columns:repeat(2, 2fr);
+    grid-template-areas: 65% 35%;
+    gap:30px;
     padding: 30px ;
+    margin: 25px auto;
 }
 .security-item img{
-      min-height: 25vh;
-      max-width: 30vw;
+      min-height: 35vh;
+      max-width: 40vw;
   }
 .security-item h1{
-    font-size: 46px;
+    font-size: 36px;
     color:var(--bg-primary-color);
 }
 .security-item h3{
@@ -623,20 +615,20 @@ p {
 .electronic-container{
     height: auto;
     width:100%;
-    display: grid;
-    padding: 20px;
+    display: flex;
 }
 
 .electronic-item{
     width:100%;
     display: grid;
-    grid-template-columns: 40% 60%;
-    gap:90px;
-    padding: 20px; 
-    margin: 20px;
+    grid-template-columns: repeat(2,2fr);
+    grid-template-areas: 35% 65%;
+    padding: 40px 15px;
+    gap:5px;
+    margin:10px auto;
 }
 .electronic-item h1{
-    font-size: 46px;
+    font-size: 36px;
     color:var(--bg-primary-color);
 }
 .electronic-item h3{
@@ -645,18 +637,9 @@ p {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 300;
 }
-.electronic-item button{
-    width: 180px;
-    height: 50px;
-    color: white;
-    background-color: var(--bg-primary-color);
-    font-size: 2rem;
-    border-radius: 25px;
-    border: none;
 
-  }
   .cctv-installation{
-    height: 1100px;
+    height: auto;
     width: 100%;
     background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('../assets/cctv-camera-installation-services.jpg');
     background-attachment: fixed;
@@ -667,8 +650,8 @@ p {
     color:white;  
 }
 .cctv-installation-item h3 {
-    margin: 20px;
-    padding: 20px;
+    margin: 20px 10px;
+    padding: 10px;
     line-height: 1.5;
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
@@ -676,13 +659,16 @@ p {
 }
 
 .cctv-installation-item {
+    height: auto;
     width: 100%;
-    margin: 25px;
-    padding:25px 20px;
+    margin: 25px 5px;
+    padding:45px 20px;
 }
+
 .cctv-installation-item h1{
     font-size: 35px;
     color:var(--bg-primary-color);
+    margin:25px 0 ;
 }
 .cctv-installation-item ul{
     padding: 10px;
@@ -694,60 +680,49 @@ p {
 .cctv-installation li::marker{
     color: var(--bg-primary-color);
 }
-
-
-  .acess-control{
+.acess-control{
     height: 700px;
     width:100%;
     display: grid;
+    grid-template-columns: repeat(2fr, 2fr);
+
     padding: 30px;
 }
 .access-control-item {
     height: auto;
-    width:100%;
+    width:900px;
     display: grid;
-    grid-template-columns: 70% 30%;
-    padding: 20px;
-    padding-right: 20px;
-    padding-top:  40px;
+    grid-template-columns: repeat(2, 2fr); 
+    margin: 25px auto;
+    padding: 30px 15px;
 }
-.acess-control img{
-      min-height: 25vh;
-      max-width: 30vw;
+.access-control-info {
+    height: auto;
+    margin: 25px;
+    padding: 20px 15px;
+}
+.access-control-info img{
+      min-height: 45vh;
+      max-width: 40vw;
+      aspect-ratio: 2/2;
   }
-.access-control-item h1{
-    font-size: 46px;
+.access-control-info h1{
+    font-size: 36px;
     color:var(--bg-primary-color);
 }
-.access-control-item ul li{
-    list-style: none;
-    font-size: 14px;
-}
-.access-control-item ul {
+
+.access-control-info ul {
+    height: auto;
     background: linear-gradient(0deg, rgb(13, 140, 89) 0%, rgba(216,237,62,0.9668242296918768) 100%);
     border-radius: 20px 15px;
-    box-shadow: rgb(0, 0, 0) ;
+    box-shadow: rgb(0, 0, 0,0.5) ;
     width: 260px;
 }
 
-.access-control-item p, .access-control-item h4 {
-    padding: 10px;
+.access-control-info p {
     line-height: 1.5;
-    font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 300;
+    
 }
-
-.acess-control button{
-    width: 180px;
-    height: 50px;
-    color: white;
-    background-color: var(--bg-primary-color);
-    font-size: 2rem;
-    border-radius: 25px;
-    border: none;
-
-  }
 
 .alarm-system{
     height: 100vh;
@@ -760,21 +735,18 @@ p {
     color:white; 
 }
 .alarm{
+    height: auto;
     width: 100%;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: repeat(2,2fr);
     gap: 10px;
+    margin: 30px 0;
+    padding: 35px 10px;
 }
 .alarm img{
     height: 300px;
     width: 450px;
     cursor: pointer;
-}
-.alarm h3, .alarm p{
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 1.5;
 }
 
 
@@ -830,29 +802,26 @@ p {
     width:100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 60px;
+    gap: 30px;
     padding: 20px;
-    margin: 5px;
+    margin: 5px auto;
 }
 
 .patrol-item h1{
-    font-size: 48px;
+    font-size: 38px;
     color:var(--bg-primary-color);
+    margin: 25px;
 }
-.patrol-item h3{
+.patrol-item p{
     margin: 5px;
-    padding: 3px;
     line-height: 1.5;
-    font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 300;
 }
+
 .patrol-item li::marker{
     color: var(--bg-primary-color);
 }
 .patrol-text {
     margin:  15px;
-    padding: 20px 15px;
 }
  
 .patrol-item img{
@@ -878,17 +847,15 @@ p {
 }
 .monitoring-container h1{
     text-align: center;
-    font-size: 48px;
+    font-size: 36px;
     color:var(--bg-primary-color);
     padding: 20px;
 }
 .monitoring-container p{
-    width: 90%;
+    width: 100%;
     padding: 20px;
     line-height: 1.5;
-    font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 300;
+ 
 }
 
 
@@ -937,7 +904,7 @@ p {
 } 
 
 .intergrated-service-text {
-    margin: 20px 15px;
+    margin: 20px auto;
     padding: 20px 15px;
 }
 .intergrated-service-image {
@@ -950,9 +917,8 @@ p {
 }
 
 .intergrated-service-text h1{
-    margin: 20px;
-    display: block;
-    font-size: 48px;
+    margin: 20px 10px;
+    font-size: 38px;
     color: var(--bg-primary-color);
 }
 
@@ -983,9 +949,8 @@ p {
 
 .gallery{
     min-height: 55vh;
-    width: 100vw;
+    width: 100%;
     top: -3rem;
-    text-align: center;
     overflow: hidden;
     line-height: 10rem;
 }
@@ -1085,6 +1050,8 @@ p {
     border-radius: 0 3px 3px 0;
     user-select: none;
     -webkit-user-select: none;
+    font-size: 30px;
+    text-decoration: none;
   }
   .prev{
     left: 0;
@@ -1104,7 +1071,6 @@ p {
     min-height: 55vh;
     width: 100vw;
     top: -3rem;
-    text-align: center;
     overflow: hidden;
     line-height: 1rem;
 }
@@ -1126,39 +1092,42 @@ p {
     color: #fff;
     padding: 15px 0;
     margin: 5px 0;
+    text-align: center;
 }
 
 .contact-details {
     display: flex;
-    width: 1120px;
+    justify-content: center;
+    width: 100%;
     height: 100%;
-    margin: 25px 40%;
-
+    margin: 25px 20%;
 }
-.contact-details-text p {
-    display: inline;
+.contact-details-text {
+    padding: 10% 0;
     color: #fff;
+}
+.more-offices-button {
+    width: 250px;
+    background: var(--bg-primary-color);
+    cursor: pointer;
+    margin: 60px auto;
+    padding:15px;
+    border-radius: 25px;
+    text-align: center;
 }
 .more-offices-button a {
     color: #fff;
     text-decoration: none;
-    font-size: 18px;
-    background: var(--bg-primary-color);
-    cursor: pointer;
-    margin: 60px 0;
-    padding:15px;
-
 }
-.office-item-details {
-    background: linear-gradient(0deg, rgb(13, 140, 89) 0%, rgba(216,237,62,0.9668242296918768) 100%);
 
+
+.office-item-details {
+    width: 1200px;
+    display: grid;
+    margin: 10px;
+    padding: 20px 10px;
     height: 400px;
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 40px;
-    padding: 20px ;
+
 }
 .office-item-details p {
     display: inline;
@@ -1189,11 +1158,15 @@ p {
     width: 100% ;
     height: auto;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 10px;
-    padding: 10px 45px;
 
+}
+.offices-details {
+    height: auto;
+    width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    gap: 2px;
+    margin: 5px auto;
 }
 .offices-item {
     height: 280px;
@@ -1224,7 +1197,7 @@ p {
   }
   .contact-form form button, .contact-form form input, .contact-form form textarea{
     width:70%;
-    padding:1.4em;
+    padding:.8em;
     margin: 5px;
     border:1px solid #c9e6ff;
   }
@@ -1540,20 +1513,26 @@ p {
     color: gray;
 }
 
+
+/* Firearm ********** */
 .firearm-training-container {
-    display: flex;
     width: 100%;
     height: auto;
     background: var(--bg-secondary-color);
 }
+
+.firearm-header h1 {
+    width: 100%;
+    text-align: center;
+    padding: 40px 0;
+}
 .firearm-wraper {
-    position: relative;
+    display: flex;
     width: 100%;
     height: auto;
     display: flex;
     padding: 10px;
     margin: 5px 10px;
-    align-items: center;
     box-shadow: 0 0 0 10px rgba(#cfc5c5,.1);
 }
 
@@ -1566,14 +1545,7 @@ p {
     padding: 30px 20px;
     margin: 15px;
 }
-.firearm-header p {
-    top: 0;
-    font-size: 26px;
-    position: relative;
-    text-transform: uppercase;
-    font-weight: 400;
-    text-align: center;
-}
+
 .firearm-image-short-gun {
     display: flex;
     align-items: center;
@@ -2131,8 +2103,14 @@ p,h3 {
     font-size: 3.8rem;
     align-items: center;
 }
-.image-overlay {
+.image-overlay   {
+    top: -50%;
     position: relative;
+    background-position: top;
+    background-size:auto;
+    object-fit: fit;
+    object-position: center;
+    aspect-ratio: 2/8;
 }
 .logo img{
     width: 80px;
@@ -2201,6 +2179,9 @@ p,h3 {
     width: 100%;
     height: auto;
 }
+.services-item h3 {
+    text-align: center;
+}
 .security-item {
     height: auto;
     width: 100%;
@@ -2249,11 +2230,16 @@ p,h3 {
     margin: 20px 0;
    
 }
-.alarm li {
-    display: relative;
+.alarm {
+    display: block;
     height: auto;
     width: 100%;
     padding: 0 5px;
+}
+.alarm img {
+    width: 300px;
+    height: 300px ;
+    aspect-ratio: 1/8;
 }
 .access-control-item {
     height: auto;
@@ -2276,6 +2262,10 @@ p,h3 {
     width: 100%;
     display: block;
 }
+.patrol-item img {
+    width: 300px;
+    height: 250px;
+}
 .monitoring-container {
     height: auto;
     width: 100%;
@@ -2290,6 +2280,11 @@ p,h3 {
     height: auto;
     width: 100%;
 }
+.intergrated-service-item img {
+    width: 300px;
+    height: 300px;
+}
+
 .gallery{
     height: auto;
     width: 100%;
@@ -2303,7 +2298,16 @@ p,h3 {
 .gallery-item {
     padding: 10px;
 }
-     
+  .offices-details{
+    height: auto;
+    width: 100%;
+    display: block;
+  }
+.offices-item {
+    height: 200px;
+    width: 335px;
+    margin: 8px auto;
+}
  .contact-container{
     display: block;
     height:auto;
@@ -2429,6 +2433,7 @@ p,h3 {
     padding:20px 0 ;
  }
 
+ 
  .academy-header p{
     height: 100%;
     position: relative;
@@ -2442,10 +2447,21 @@ p,h3 {
     height: auto;
     width: 100%;
  }
+ .psira-grade-card {
+    height: auto;
+    width: 320px;
+    padding: 10px;
+    margin: 5px auto;
+ }
  .firearm-wraper {
     display: block;
     width: 100%;
     height: auto;
+    padding: 10px;
+    margin: 5px auto;
+ }
+ .firearm-card {
+    width: 320px;
 
  }
 }
