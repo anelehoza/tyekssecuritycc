@@ -1,5 +1,8 @@
 //mobile navigation
 
+// const { get } = require("browser-sync");
+// const { header } = require("express-validator");
+
 window.onload = function () {
   const navMenu = document.getElementById("nav-menu");
   const navToggle = document.getElementById("nav-toggle");
@@ -26,6 +29,17 @@ window.onload = function () {
       show_menu = false;
     }
   }
+
+  fetch('https://vite.dev/guide/features.html', 
+    { method: "GET", 
+      mode: 'no-cors',
+      headers: { 
+        'Content-Type': 'application/json',
+      }
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+
 };
 
 $(document).ready(function () {
@@ -116,89 +130,4 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
 }
 
-//partners slides
-
-(function () {
-  var swiper = new Swiper("clients-containe", {
-    spaceBetween: 30,
-    effect: "fade",
-    autoplay: true,
-  });
-})(jQuery);
-
-//New Page Section
-
-//Create Post to server
-function myArticle(e) {
-  e.preventDefualt();
-  var title = document.getElementById("title").value;
-  var author = document.getElementById("author").value;
-  var content = document.getElementById("content").value;
-  var category = document.getElementById("category").value;
-}
-function myJobs(e) {
-  e.preventDefualt();
-  var title = document.getElementById("title").value;
-  var author = document.getElementById("author").value;
-  var content = document.getElementById("content").value;
-  var category = document.getElementById("category").value;
-}
-
-// function newsUser(e) {
-//   e.preventDefualt();
-//   var username = document.getElementById("username").value;
-//   var password = document.getElementById("password").value;
-//   var email = document.getElementById("email").value;
-// }
-
-// ?
-$('article').readmore();
-$('article').readmore({ speed: 75, lessLink: '<a href="#">Read less</a>' });
-
-
-  fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
-  .then(response => {
-    if(!response) {
-      throw new Error('network is not ok')
-    }
-    return response.json()
-  })
-  .then(data =>{
-    console.log(data)
-    displayData(data)
-  })
-  .catch ((error) => console.log('Error:', error))
-
-function displayData(data) {
-  const cocktail = data.drinks[0]
-  const cocktailDiv = document.getElementById('cocktail')
-
-  const cocktailName = cocktail.strDrink
-  const heading = document.createElement('h1')
-  heading.innerHTML = cocktailName
-  cocktailDiv.appendChild(heading)
-
-  const cocktailImg = document.createElement("img");
-  cocktailImg.src = cocktail.strDrinkThumb;
-  cocktailDiv.appendChild(cocktailImg);
-  document.body.style.backgroundImage = "url('" + cocktail.strDrinkThumb + "')";
-
-  const cocktailIngredients = document.createElement("ul");
-  cocktailDiv.appendChild(cocktailIngredients);
-  const getIngredients = Object.keys(cocktail)
-    .filter(function (ingredient) {
-      return ingredient.indexOf("strIngredient") == 0;
-    })
-    .reduce(function (ingredients, ingredient) {
-      if (cocktail[ingredient] != null) {
-        ingredients[ingredient] = cocktail[ingredient];
-      }
-      return ingredients;
-    }, {});
-  for (let key in getIngredients) {
-    let value = getIngredients[key];
-    listItem = document.createElement("li");
-    listItem.innerHTML = value;
-    cocktailIngredients.appendChild(listItem);
-}
-}
+//fetch articles to display in news page
