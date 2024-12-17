@@ -1,22 +1,24 @@
 const express = require('express')
-const router = express()
+const router = express.Router()
+const path = require('path')
 const nodemailer = require('nodemailer')
 
 router.post('/send', (req, res) =>{
-    const newEmail = {
-        name: req.body.name,
-        email: req.body.email,
-        phone: req.body.name,
-    }
+    // const output = {
+    //     let name: req.body.name,
+    //     let email: req.body.email,
+    //     let phone: req.body.name
+    //     let message: req.body.message 
+    // }
     //create reusable transporter
 
-    const transporter = nodemailer.createTransport({
-        host:"mail.tyekssecurity.co.za",
-        port:465,
-        Secure: true,
+    let transporter = nodemailer.createTransport({
+        host:"smtp.elasticemail.com",
+        port:2525,
+        Secure: false,
         auth: {
             user:"info@tyekssecurity.co.za",
-            pass: "TyEk$@2024",
+            pass: "C67899F227C38917D3BD47FA7B0DF61152F6",
         },
 
         tls:{
@@ -28,11 +30,11 @@ router.post('/send', (req, res) =>{
     //setup email data with unicode symbols
 
     let mailOptions = {
-        from: '"Nodemailer Contact" <your@email.com>',
+        from: "Nodemailer Contact" ``,
         to: 'info@tyekssecurity.co.za',
-        subject: 'Node Contact Request',
-        text: 'hello there',
-        html: newEmail
+        subject: ' Contact Request',
+        text:'`${message}`',
+        html: output
     }
 
  //send email with defined transport object
@@ -45,5 +47,7 @@ router.post('/send', (req, res) =>{
     console.log('Preview URL: %s', nodemailer.getTestMessageUrl)
 
     res.render('contact', {msg: 'Email has been sent'})
- })
+
 })
+})
+module.exports = router
