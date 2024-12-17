@@ -1,19 +1,14 @@
 
 const express = require("express");
 const app = express();
-const port = process.env.PORT || 3000;
-const mongoose = require('mongoose')
-const nodemailer = require('nodemailer')
-const session = require('express-session')
-const hash = require('pbkdf2-password')()
+const port = 3000;
 
 const cors = require("cors");
 const bodyParser = require("body-parser");
 
-const articleRouter = require("./dist/routes/articleRoute");
-const jobRouter = require("./dist/routes/jobRoute");
+//const articleRouter = require("./dist/routes/articleRoute");
+//const jobRouter = require("./dist/routes/jobRoute");
 const emailRouter = require("./dist/routes/emailRoute");
-const usersRouter = require("./dist/routes/usersRoute");
 
 const dotenv = require("dotenv");
 require("dotenv").config();
@@ -126,83 +121,13 @@ app.get("/news", function (req, res) {
   app.use(express.static("/js"));
 });
 
-// app.get("/offices", function (req, res) {
-//   res.sendFile(path.join(__dirname + "/dist/offices.html"));
-//   app.use(express.static(path.join(__dirname, "/css")));
-//   app.use("/assets", express.static("assets"));
-//   app.use(express.static("/js"));
-// });
-// app.get('/users', (req, res) => {
-//   const users = newsUser.find()
-//   console.log(users)
+app.get("/offices", function (req, res) {
+  res.sendFile(path.join(__dirname + "/dist/offices.html"));
+  app.use(express.static(path.join(__dirname, "/css")));
+  app.use("/assets", express.static("assets"));
+  app.use(express.static("/js"));
+});
 
-// })
-
-// hash({password: 'newsusers'}, function(err, pass, salt, hash) {
-//   if(err) throw err
-//   // store the salt & hash in the database
-//   users.users.salt = salt
-//   users.users.hash = hash
-// })
-
-// function authenticate(name, pass, fn) {
-//   if(!module.parent) console.log('authenticating %s:%s', name, pass)
-//     let user = users[name]
-//   //querry db for given username
-//   if(!user) return fn(null, null)
-  
-//   hash({password: pass, salt: user.salt}, function (err, pass, salt, hash) {
-//     if (err) return fn(err)
-//       if(hash === user.hash) return fn(null, user)
-//         fn(null, null)
-//   })
-// }
-
-// function restrict(req, res, next) {
-//   if (req.session.user) {
-//     next()
-//   } else {
-//     req.session.error = 'Access denied'
-//     res.redirect('/signIn')
-//   }
-// }
-
-// app.get('/news', function(req, res) {
-//   res.redirect('/signIn')
-// })
-
-// app.get('/rescrited', restrict, function(req, res) {
-//   res.send('Oops you are not allowed to be here, click to <a href="/signOut">sign out </a>')
-// })
-
-// app.get('/signOut', function(req, res) {
-//   //destroy the user's session to log them out
-//   //wil be re-created i next request
-//   req.session.destroy(function() {
-//     res.redirect('postsListings')
-//   })
-// })
-
-// app.get('/signIn', function(req, res){
-//   if(!req.body) return res.sendStatus(400)
-//     authenticate(req.body.username, req.body.password, function(err, user){
-//   if (err) return next(err)
-//   if (user) {
-//     //Regenerate session when signing in
-//     // to prevent fixation
-//     req.session.regenerate(function(){
-//       //store user's primary key
-//       req.session.user = user
-//       req.session.sucess = 'Authenticated as ' + user.name + 'click to <a href="/restricted">/restricted</a>.'
-//       res.redirect(req.get('Referrer') || '/news')
-//     })
-//   } else {
-//     req.session.error = 'Authentication failed, please check your ' + ' username and password.'
-//     res.redirect('signIn')
-//   }})
-// })
-
-
-app.listen(port, (req, res) => {
-  console.log(`Server running on..${port}`);
+app.listen(3000, (req, res) => {
+  console.log(`Server running on..`);
 });

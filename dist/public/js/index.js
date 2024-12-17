@@ -40,7 +40,6 @@ $(document).ready(function () {
       $(".header").css({ background: "none", "box-shadow": "none" });
     }
   });
-  //Back to top
   $(window).scroll(function () {
     if ($(this).scrollTop() > 100) {
       $(".back-to-top").fadeIn("slow");
@@ -49,7 +48,8 @@ $(document).ready(function () {
     }
   });
 
-  $(".back-to-top").click(function () {
+  $(".back-to-top").click(function (e) {
+    e.preventDefualt()
     $("html, body").animate({ scrollTop: 0 }, 1500, "easeInOutExpo");
     return false;
   });

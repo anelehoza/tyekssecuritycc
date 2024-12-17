@@ -34,7 +34,7 @@ p {
     text-align: center;
 }
 .about .lg-heading{
-    padding-top: 16rem;
+    padding-top: 1rem;
 }
 .wrapper{
     position: relative;
@@ -96,7 +96,6 @@ p {
 }
 
 .show{
-
     top: 5px;
 }
 .nav_close .fa-times{
@@ -117,7 +116,7 @@ p {
 }
 
 .btn-line{
-    width: 28px;
+    width: 23px;
     height: 2px;
     margin: 0 0 3px 0;
     background: #fff;
@@ -127,13 +126,13 @@ p {
     transform: rotate(180deg);
  }
 .menu-btn.close .btn-line:nth-child(1) {
-    transform: rotate(45deg) translate(9px, 9px);
+    transform: rotate(45deg) translate(-2px, 8px);
  }
 .menu-btn.close .btn-line:nth-child(2) {
     opacity: 0;
  }
 .menu-btn.close .btn-line:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px); 
+    transform: rotate(-45deg) translate(2px, -10px); 
 }
 .home{
     height: 100%;
@@ -217,7 +216,6 @@ p {
     background-size: cover;
     background-repeat: no-repeat;
     object-fit: contain;
-
     right: 0;
     height: 350px;
     width:100%;
@@ -279,24 +277,36 @@ p {
 
 .about{
     width: 100%;
-    top: -3rem;
+    top: 1rem;
     text-align: center;
-    overflow-x: hidden;
     line-height: 1rem;
 }
 
 .about-container{
-padding: 30px;
-}
-
-.text{
-    padding:0 23px;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     width: 100%;
+    display: flex;
+    height: auto;
+}
+.about-text {
+    width: 100%;
+    height: auto;
+    display: inline;
+    line-height: 1.8;
+    padding: 10px 18px;
+
+}
+.about-text h1 {
+    margin:25px auto;
+}
+.text p{
+    width: 100%;
+    height: auto;
+    display: inline;
+    padding: 8px 20px;
+    margin: 10px auto;
+    line-height: 1.8;
+    
+
 }
 
 .text h1 {
@@ -404,23 +414,24 @@ padding: 30px;
 }
 
 .services-container{
-    display: flex;
     height:auto;
     width: 100%;
     margin: 0;
     padding: 0;
+
 }
 .services-wrapper{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
     height: auto;
-    margin: 10px 20px;
-    padding:0 10px ;
+    width: 100%;
+    margin: 5px auto;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:5px;
+    
 }
 .services-item{
     display: flex;
-    flex-wrap: nowrap;
     flex-direction: column;
     width: 600px;
     height: 350px;
@@ -440,13 +451,15 @@ padding: 30px;
     border-radius: 50%;
     padding: 5px;
 }
+.services-item-header h2 {
+    text-align: center;
+
+}
 .services-item-info {
     width: 100%;
-    display: inline;
+    height: auto;
     padding: 10px;
-    margin: 10px;
     line-height: 1.8;
-    font-size: 18px;
 }
 .services-btn-readmore {
     color: #fff;
@@ -492,11 +505,11 @@ padding: 30px;
 }
 
 .armed-gaurds h1{
-    font-size: 48px;
+    font-size: 38px;
     color:var(--bg-primary-color);
 }
 .armed-gaurds h3{
-    width: 70%;
+    width: 100%;
     font-size: 18px;
     font-family: 600;
     line-height: 1.5;
@@ -521,35 +534,27 @@ padding: 30px;
     height: 450px;
 }
 
-.armed-gaurds button{
-    width: 180px;
-    height: 50px;
-    color: white;
-    background-color: var(--bg-primary-color);
-    font-size: 2rem;
-    border-radius: 25px;
-    border: none;
-    
-}
-.armed-gaurds li::marker{
+.gaurds-accordion ul li::marker{
     color: var(--bg-primary-color);
     list-style: none;
 }
 
-.security-item {
+.security-item  {
     height: 500px;
     width:100%;
     display: grid;
-    grid-template-columns:60% 40%;
-    gap:40px;
+    grid-template-columns:repeat(2, 2fr);
+    grid-template-areas: 65% 35%;
+    gap:30px;
     padding: 30px ;
+    margin: 25px auto;
 }
 .security-item img{
-      min-height: 25vh;
-      max-width: 30vw;
+      min-height: 35vh;
+      max-width: 40vw;
   }
 .security-item h1{
-    font-size: 46px;
+    font-size: 36px;
     color:var(--bg-primary-color);
 }
 .security-item h3{
@@ -610,20 +615,20 @@ padding: 30px;
 .electronic-container{
     height: auto;
     width:100%;
-    display: grid;
-    padding: 20px;
+    display: flex;
 }
 
 .electronic-item{
     width:100%;
     display: grid;
-    grid-template-columns: 40% 60%;
-    gap:90px;
-    padding: 20px; 
-    margin: 20px;
+    grid-template-columns: repeat(2,2fr);
+    grid-template-areas: 35% 65%;
+    padding: 40px 15px;
+    gap:5px;
+    margin:10px auto;
 }
 .electronic-item h1{
-    font-size: 46px;
+    font-size: 36px;
     color:var(--bg-primary-color);
 }
 .electronic-item h3{
@@ -632,18 +637,9 @@ padding: 30px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 300;
 }
-.electronic-item button{
-    width: 180px;
-    height: 50px;
-    color: white;
-    background-color: var(--bg-primary-color);
-    font-size: 2rem;
-    border-radius: 25px;
-    border: none;
 
-  }
   .cctv-installation{
-    height: 1100px;
+    height: auto;
     width: 100%;
     background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('../assets/cctv-camera-installation-services.jpg');
     background-attachment: fixed;
@@ -654,8 +650,8 @@ padding: 30px;
     color:white;  
 }
 .cctv-installation-item h3 {
-    margin: 20px;
-    padding: 20px;
+    margin: 20px 10px;
+    padding: 10px;
     line-height: 1.5;
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
@@ -663,13 +659,16 @@ padding: 30px;
 }
 
 .cctv-installation-item {
+    height: auto;
     width: 100%;
-    margin: 25px;
-    padding:25px 20px;
+    margin: 25px 5px;
+    padding:45px 20px;
 }
+
 .cctv-installation-item h1{
     font-size: 35px;
     color:var(--bg-primary-color);
+    margin:25px 0 ;
 }
 .cctv-installation-item ul{
     padding: 10px;
@@ -681,60 +680,49 @@ padding: 30px;
 .cctv-installation li::marker{
     color: var(--bg-primary-color);
 }
-
-
-  .acess-control{
+.acess-control{
     height: 700px;
     width:100%;
     display: grid;
+    grid-template-columns: repeat(2fr, 2fr);
+
     padding: 30px;
 }
 .access-control-item {
     height: auto;
-    width:100%;
+    width:900px;
     display: grid;
-    grid-template-columns: 70% 30%;
-    padding: 20px;
-    padding-right: 20px;
-    padding-top:  40px;
+    grid-template-columns: repeat(2, 2fr); 
+    margin: 25px auto;
+    padding: 30px 15px;
 }
-.acess-control img{
-      min-height: 25vh;
-      max-width: 30vw;
+.access-control-info {
+    height: auto;
+    margin: 25px;
+    padding: 20px 15px;
+}
+.access-control-info img{
+      min-height: 45vh;
+      max-width: 40vw;
+      aspect-ratio: 2/2;
   }
-.access-control-item h1{
-    font-size: 46px;
+.access-control-info h1{
+    font-size: 36px;
     color:var(--bg-primary-color);
 }
-.access-control-item ul li{
-    list-style: none;
-    font-size: 14px;
-}
-.access-control-item ul {
+
+.access-control-info ul {
+    height: auto;
     background: linear-gradient(0deg, rgb(13, 140, 89) 0%, rgba(216,237,62,0.9668242296918768) 100%);
     border-radius: 20px 15px;
-    box-shadow: rgb(0, 0, 0) ;
+    box-shadow: rgb(0, 0, 0,0.5) ;
     width: 260px;
 }
 
-.access-control-item p, .access-control-item h4 {
-    padding: 10px;
+.access-control-info p {
     line-height: 1.5;
-    font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 300;
+    
 }
-
-.acess-control button{
-    width: 180px;
-    height: 50px;
-    color: white;
-    background-color: var(--bg-primary-color);
-    font-size: 2rem;
-    border-radius: 25px;
-    border: none;
-
-  }
 
 .alarm-system{
     height: 100vh;
@@ -747,21 +735,18 @@ padding: 30px;
     color:white; 
 }
 .alarm{
+    height: auto;
     width: 100%;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: repeat(2,2fr);
     gap: 10px;
+    margin: 30px 0;
+    padding: 35px 10px;
 }
 .alarm img{
     height: 300px;
     width: 450px;
     cursor: pointer;
-}
-.alarm h3, .alarm p{
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 1.5;
 }
 
 
@@ -817,29 +802,26 @@ padding: 30px;
     width:100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 60px;
+    gap: 30px;
     padding: 20px;
-    margin: 5px;
+    margin: 5px auto;
 }
 
 .patrol-item h1{
-    font-size: 48px;
+    font-size: 38px;
     color:var(--bg-primary-color);
+    margin: 25px;
 }
-.patrol-item h3{
+.patrol-item p{
     margin: 5px;
-    padding: 3px;
     line-height: 1.5;
-    font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 300;
 }
+
 .patrol-item li::marker{
     color: var(--bg-primary-color);
 }
 .patrol-text {
     margin:  15px;
-    padding: 20px 15px;
 }
  
 .patrol-item img{
@@ -865,17 +847,15 @@ padding: 30px;
 }
 .monitoring-container h1{
     text-align: center;
-    font-size: 48px;
+    font-size: 36px;
     color:var(--bg-primary-color);
     padding: 20px;
 }
 .monitoring-container p{
-    width: 90%;
+    width: 100%;
     padding: 20px;
     line-height: 1.5;
-    font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 300;
+ 
 }
 
 
@@ -924,7 +904,7 @@ padding: 30px;
 } 
 
 .intergrated-service-text {
-    margin: 20px 15px;
+    margin: 20px auto;
     padding: 20px 15px;
 }
 .intergrated-service-image {
@@ -937,9 +917,8 @@ padding: 30px;
 }
 
 .intergrated-service-text h1{
-    margin: 20px;
-    display: block;
-    font-size: 48px;
+    margin: 20px 10px;
+    font-size: 38px;
     color: var(--bg-primary-color);
 }
 
@@ -970,20 +949,23 @@ padding: 30px;
 
 .gallery{
     min-height: 55vh;
-    width: 100vw;
+    width: 100%;
     top: -3rem;
-    text-align: center;
     overflow: hidden;
     line-height: 10rem;
 }
 
 .gallery-container {
     height: 100%;
-    width:95%;
+    width:100%;
+}
+.gallery {
+    height: auto;
+    width: 1200px;
     display: grid;
     grid-template-columns: repeat(5 ,1fr);
     gap: 10px;
-    margin: 5px 20px;
+    margin: 5px auto;
     padding: 10px;
 }
 .gallery-item {
@@ -995,6 +977,7 @@ padding: 30px;
     transition: 0.3s;
     background-size: cover;
     object-fit: cover;
+    
 }
 
 
@@ -1067,6 +1050,8 @@ padding: 30px;
     border-radius: 0 3px 3px 0;
     user-select: none;
     -webkit-user-select: none;
+    font-size: 30px;
+    text-decoration: none;
   }
   .prev{
     left: 0;
@@ -1086,7 +1071,6 @@ padding: 30px;
     min-height: 55vh;
     width: 100vw;
     top: -3rem;
-    text-align: center;
     overflow: hidden;
     line-height: 1rem;
 }
@@ -1101,8 +1085,6 @@ padding: 30px;
     margin: 20px 0;
     height: auto;
     width: 100%;
-    display: flex;
-    flex-direction: column;
     background: linear-gradient(0deg, rgb(13, 140, 89) 0%, rgba(216,237,62,0.9668242296918768) 100%);
 
 }
@@ -1110,37 +1092,42 @@ padding: 30px;
     color: #fff;
     padding: 15px 0;
     margin: 5px 0;
+    text-align: center;
 }
-.contact-details {
-    
-    padding: 10px 0;
-    margin: 20px 0;
 
+.contact-details {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 25px 20%;
 }
-.contact-details p {
-    display: inline;
+.contact-details-text {
+    padding: 10% 0;
     color: #fff;
+}
+.more-offices-button {
+    width: 250px;
+    background: var(--bg-primary-color);
+    cursor: pointer;
+    margin: 60px auto;
+    padding:15px;
+    border-radius: 25px;
+    text-align: center;
 }
 .more-offices-button a {
     color: #fff;
     text-decoration: none;
-    font-size: 18px;
-    background: var(--bg-primary-color);
-    cursor: pointer;
-    margin: 60px 0;
-    padding:15px;
-
 }
-.office-item-details {
-    background: linear-gradient(0deg, rgb(13, 140, 89) 0%, rgba(216,237,62,0.9668242296918768) 100%);
 
+
+.office-item-details {
+    width: 1200px;
+    display: grid;
+    margin: 10px;
+    padding: 20px 10px;
     height: 400px;
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 40px;
-    padding: 20px ;
+
 }
 .office-item-details p {
     display: inline;
@@ -1171,11 +1158,15 @@ padding: 30px;
     width: 100% ;
     height: auto;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 10px;
-    padding: 10px 45px;
 
+}
+.offices-details {
+    height: auto;
+    width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    gap: 2px;
+    margin: 5px auto;
 }
 .offices-item {
     height: 280px;
@@ -1195,7 +1186,35 @@ padding: 30px;
     color: white;
     font-size: 18px;
 }
-
+.contact-form{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:20px;
+  }
+.contact-form form label{
+    display:block;
+  }
+  .contact-form form button, .contact-form form input, .contact-form form textarea{
+    width:70%;
+    padding:.8em;
+    margin: 5px;
+    border:1px solid #c9e6ff;
+  }
+  .contact-form form button{
+    background:#c9e6ff;
+    border:0;
+    text-transform: uppercase;
+  }
+  
+  .contact-form form button:hover,.contact-form form button:focus{
+    background:#92bde7;
+    color:#fff;
+    outline:0;
+    transition: background-color 2s ease-out;
+  }
+  
+  
 
 /*Careers*/
 .careers{
@@ -1226,8 +1245,7 @@ padding: 30px;
     right: 50%;
     height: 47px;
     align-items: center;
-    background: #fff;
-    padding: 5px 25px;
+    padding: 6px 25px;
     margin: 40px 15px;
     opacity: 0.7;
     z-index: 2;
@@ -1237,7 +1255,7 @@ padding: 30px;
     z-index: 2;
     font-size: 22px;
     width: 450px;
-    margin: 15px 15px;
+    margin: 15px 5px;
     padding: 10px;
     border: none;
     outline: none;
@@ -1251,7 +1269,7 @@ padding: 30px;
     cursor: pointer;  
     z-index: 4;
     padding: 10px 15px;
-    margin: 8px 65px;
+    margin: 8px;
     opacity: 1;
 }
 #job-search-button:focus {
@@ -1495,20 +1513,26 @@ padding: 30px;
     color: gray;
 }
 
+
+/* Firearm ********** */
 .firearm-training-container {
-    display: flex;
     width: 100%;
     height: auto;
     background: var(--bg-secondary-color);
 }
+
+.firearm-header h1 {
+    width: 100%;
+    text-align: center;
+    padding: 40px 0;
+}
 .firearm-wraper {
-    position: relative;
+    display: flex;
     width: 100%;
     height: auto;
     display: flex;
     padding: 10px;
     margin: 5px 10px;
-    align-items: center;
     box-shadow: 0 0 0 10px rgba(#cfc5c5,.1);
 }
 
@@ -1521,14 +1545,7 @@ padding: 30px;
     padding: 30px 20px;
     margin: 15px;
 }
-.firearm-header p {
-    top: 0;
-    font-size: 26px;
-    position: relative;
-    text-transform: uppercase;
-    font-weight: 400;
-    text-align: center;
-}
+
 .firearm-image-short-gun {
     display: flex;
     align-items: center;
@@ -1976,16 +1993,11 @@ font-size: 17px;
     margin: 0;
 }
 
-.footer .footer-top .footer-links ul i {
-    padding-right: 8px;
-    color: #ffffff;
-    font-size: 16px;
-}
-
 .footer .footer-top .footer-links ul li {
     border-bottom: 1px solid #ffffff;
     padding: 7px 0;
 }
+
 
 .footer .footer-top .footer-links ul li:first-child {
     padding-top: 0;
@@ -1994,10 +2006,11 @@ font-size: 17px;
 .footer .footer-top .footer-links ul a {
     font-size: 14px;
     color: #ffffff;
+    text-decoration: none;
 }
 
 .footer .footer-top .footer-links ul a:hover {
-    color: #00bfff;
+    color: var(--bg-secondary-color);
 }
 
 .footer .footer-top .footer-contact p {
@@ -2047,12 +2060,9 @@ font-size: 17px;
     position: fixed;
     display: none;
     background-color: #00bfff;
-    color: #ffffff;
-    width: 45px;
-    height: 45px;
+    color: #ffff;
     text-align: center;
     line-height: 1;
-    font-size: 44px;
     right: 15px;
     bottom: 15px;
     transition: background 0.3s;
@@ -2060,23 +2070,33 @@ font-size: 17px;
 }
 
 .back-to-top i {
+
     color:#111;
 }
 
 .back-to-top i:hover {
-    color: black;
+    color: #fff;
 }
+
+.back-to-top {
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    border-radius: 50%;
+
+}
+
 /* Media Query */
 @media (max-width: 600px){
 body {
     overflow-x: hidden ;
 }
 h1{
-        font-size: 20px;
+        font-size: 19px;
         line-height: 1;
 }
 h2 {
-    font-size: 18px;
+    font-size: 17px;
     line-height: 1;
 }
 p,h3 {
@@ -2085,14 +2105,25 @@ p,h3 {
 
 
 .home {
-    height:100%;
+    height:auto;
+    width: 100%;
 }
 .home .home-title {
     font-size: 3.8rem;
+    align-items: center;
+}
+.image-overlay   {
+    top: -50%;
+    position: relative;
+    background-position: top;
+    background-size:auto;
+    object-fit: fit;
+    object-position: center;
+    aspect-ratio: 2/8;
 }
 .logo img{
-    width: 85px;
-    height: 90px;
+    width: 80px;
+    height: 85px;
     z-index: 1;
 }
 
@@ -2135,27 +2166,30 @@ p,h3 {
     top: 0;
 } 
 
-.team-container {
+
+.team-container{
     height: auto;
     display: block;
-}
-.services-container {
-    height: auto;
-    display: block;
-    margin: 0;
-    padding: 0;
 }
 .services-item {
-    display: block ;
+    display: inline-block;
     height: 100%;
-    width: 100%;
-    margin: 15px;
-    padding: 10px;
+    width: 350px;
+    padding: 5px;
+    align-items: center;
 }
 .security-containter{
     display: block;
     height: auto;
     width: 100%;
+}
+.services-wrapper {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.services-item h3 {
+    text-align: center;
 }
 .security-item {
     height: auto;
@@ -2205,11 +2239,16 @@ p,h3 {
     margin: 20px 0;
    
 }
-.alarm li {
-    display: relative;
+.alarm {
+    display: block;
     height: auto;
     width: 100%;
     padding: 0 5px;
+}
+.alarm img {
+    width: 300px;
+    height: 300px ;
+    aspect-ratio: 1/8;
 }
 .access-control-item {
     height: auto;
@@ -2232,6 +2271,10 @@ p,h3 {
     width: 100%;
     display: block;
 }
+.patrol-item img {
+    width: 300px;
+    height: 250px;
+}
 .monitoring-container {
     height: auto;
     width: 100%;
@@ -2246,33 +2289,56 @@ p,h3 {
     height: auto;
     width: 100%;
 }
-.gallery-container {
+.intergrated-service-item img {
+    width: 300px;
+    height: 300px;
+}
+
+.gallery{
     height: auto;
+    width: 100%;
     display: block;
+    padding: 5px;
+    margin: 10px auto;
 }
 .gallery-item {
-    width: 100%;
-    height: auto;
-    margin: 15px;
+    width: 350px;
 }
-     
+.gallery-item {
+    padding: 10px;
+}
+  .offices-details{
+    height: auto;
+    width: 100%;
+    display: block;
+  }
+.offices-item {
+    height: 200px;
+    width: 335px;
+    margin: 8px auto;
+}
  .contact-container{
     display: block;
     height:auto;
     width: 100%;
-    margin: 0;
  }
  
  .contact-wrapper{
      height: auto;
      width: 100%;
-     display: block;
-     padding: 35px 10px;
+     margin-bottom: 45px;
  }
  .contact-details {
+     width: 100%;
+    display: block;
     height: auto;
-    margin: 20px 0;
-    padding: 40px 0;
+    margin: 20px auto;
+    padding: 20px; 
+ }
+ .contact-details-text {
+    margin: 10px;
+ }
+ .contact-details p{
     line-height: 1.2;
  }
  
@@ -2376,6 +2442,7 @@ p,h3 {
     padding:20px 0 ;
  }
 
+ 
  .academy-header p{
     height: 100%;
     position: relative;
@@ -2389,10 +2456,21 @@ p,h3 {
     height: auto;
     width: 100%;
  }
+ .psira-grade-card {
+    height: auto;
+    width: 320px;
+    padding: 10px;
+    margin: 5px auto;
+ }
  .firearm-wraper {
     display: block;
     width: 100%;
     height: auto;
+    padding: 10px;
+    margin: 5px auto;
+ }
+ .firearm-card {
+    width: 320px;
 
  }
 }

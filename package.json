@@ -1,19 +1,37 @@
 {
   "name": "tyekssecurity",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "deploy": "gh-pages -d dist",
     "prod": "set NODE_ENV=PRODUCTION && node server",
     "dev": "set NODE_ENV=DEVELOPMENT && node server",
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "build": " gulp"
   },
   "author": "Anele hoza",
   "license": "MIT",
   "description": "Responsive website",
+  "homepage": "http://www.tyekssecurity.co.za",
   "devDependencies": {
+    "browser-sync": "^3.0.3",
     "gh-pages": "^6.1.1",
-    "nodemon": "^3.1.4"
+    "gulp": "^5.0.0",
+    "gulp-cli": "^3.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-ejs": "^5.1.0",
+    "gulp-express": "^0.3.5",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-nodemon": "^2.5.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-useref": "^5.0.0",
+    "gulp-watch": "^5.0.1",
+    "gulp-webserver": "^0.9.1",
+    "node-sass": "^9.0.0",
+    "nodemon": "^3.1.4",
+    "sass": "^1.81.0"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
@@ -25,18 +43,31 @@
     "express": "^4.19.2",
     "express-session": "^1.18.1",
     "express-validator": "^7.1.0",
+<<<<<<< HEAD
     "gulp": "^5.0.0",
     "hash": "^0.2.1",
+=======
+    "gulp-eslint": "^6.0.0",
+>>>>>>> 5a6433c4be0003b70d6f4ff3855aec79ef4c99c1
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.8.3",
     "multer": "^1.4.5-lts.1",
+    "netlify-cli": "^17.37.2",
+    "netlify-lambda": "^2.0.16",
     "nodemailer": "^6.9.16",
+<<<<<<< HEAD
     "pbkdf2-password": "^1.2.1",
     "readmore-js": "^2.2.1",
+=======
+>>>>>>> 5a6433c4be0003b70d6f4ff3855aec79ef4c99c1
     "serverless-http": "^3.2.0"
   },
   "engines": {
     "node": ">=v20.12.2"
   },
-  "keywords": []
+  "keywords": [
+    "tyeks",
+    "tyekssecurity",
+    "tyeks security"
+  ]
 }
