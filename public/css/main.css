@@ -1916,6 +1916,15 @@ font-size: 17px;
     font-weight: 500;
     padding: 4px 15px;
 }
+.article-list {
+    display: flex;
+    right: 5;
+    top: 10px;
+    margin: 5px;
+}
+.article-list a, .article-list p {
+    color: fff;
+}
 
 
 /*Footer*/

@@ -1,8 +1,5 @@
 //mobile navigation
 
-// const { get } = require("browser-sync");
-// const { header } = require("express-validator");
-
 window.onload = function () {
   const navMenu = document.getElementById("nav-menu");
   const navToggle = document.getElementById("nav-toggle");
@@ -29,17 +26,6 @@ window.onload = function () {
       show_menu = false;
     }
   }
-
-  fetch('https://vite.dev/guide/features.html', 
-    { method: "GET", 
-      mode: 'no-cors',
-      headers: { 
-        'Content-Type': 'application/json',
-      }
-    })
-    .then(response => response.json())
-    .then(data => console.log(data))
-
 };
 
 $(document).ready(function () {
@@ -130,4 +116,40 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
 }
 
-//fetch articles to display in news page
+//partners slides
+
+(function () {
+  var swiper = new Swiper("clients-containe", {
+    spaceBetween: 30,
+    effect: "fade",
+    autoplay: true,
+  });
+})(jQuery);
+
+//New Page Section
+
+//Create Post to server
+function myArticle(e) {
+  e.preventDefualt();
+  var title = document.getElementById("title").value;
+  var author = document.getElementById("author").value;
+  var content = document.getElementById("content").value;
+  var category = document.getElementById("category").value;
+}
+function myJobs(e) {
+  e.preventDefualt();
+  var title = document.getElementById("title").value;
+  var author = document.getElementById("author").value;
+  var content = document.getElementById("content").value;
+  var category = document.getElementById("category").value;
+}
+
+// function newsUser(e) {
+//   e.preventDefualt();
+//   var username = document.getElementById("username").value;
+//   var password = document.getElementById("password").value;
+//   var email = document.getElementById("email").value;
+// }
+
+// ?
+
